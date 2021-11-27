@@ -4,11 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>Cat Energy</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
   <header class="page-header">
-    <div class="page-header__logo">
+    <div class="page-header__logo-wrapper">
       <a>
         <img class="page-header__logo-image" src="img/icons/logo-image-mobile.svg" width="34" height="38" alt="">
       </a>
@@ -17,20 +18,18 @@
       </a>
     </div>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--current">
-            <a>Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </div>
+      <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+      <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__item--current">
+          <a class="main-nav__link">Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="form.html">Подбор программы</a>
+        </li>
+      </ul>
     </nav>
   </header>
 
@@ -42,8 +41,8 @@
         <h2 class="promo__title">Функциональное питание для котов</h2>
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
         <img class="promo__image" src="img/index-can-mobile.png" alt="Cat Pro Energy с вкусом курицы">
-        <a class="promo__link button" href="form.html">Подобрать программу</a>
       </div>
+      <a class="promo__link button" href="form.html">Подобрать программу</a>
     </section>
 
     <section class="programs">
@@ -73,19 +72,27 @@
       <h2 class="plan__title">Как это работает</h2>
       <ol class="plan__list">
         <li class="plan__item">
-          <img src="img/icons/icon_leaf.svg" width="30" height="32" alt="" class="plan__img">
+          <div class="plan__img-wrapper">
+            <img class="plan__img" src="img/icons/icon_leaf.svg" width="30" height="32" alt="">
+          </div>
           <p class="plan__description">Функциональное питание содержит только полезные питательные вещества.</p>
         </li>
         <li class="plan__item">
-          <img src="img/icons/icon_tub.svg" width="29" height="31" alt="" class="plan__img">
+          <div class="plan__img-wrapper">
+            <img class="plan__img" src="img/icons/icon_tub.svg" width="29" height="31" alt="">
+          </div>
           <p class="plan__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
         </li>
         <li class="plan__item">
-          <img src="img/icons/icon_eat.svg" width="25" height="30" alt="" class="plan__img">
+          <div class="plan__img-wrapper">
+            <img class="plan__img" src="img/icons/icon_eat.svg" width="25" height="30" alt="">
+          </div>
           <p class="plan__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
         </li>
         <li class="plan__item">
-          <img src="img/icons/icon_alarm.svg" width="32" height="33" alt="" class="plan__img">
+          <div class="plan__img-wrapper">
+            <img class="plan__img" src="img/icons/icon_alarm.svg" width="32" height="33" alt="">
+          </div>
           <p class="plan__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
         </li>
       </ol>
@@ -94,15 +101,16 @@
     <section class="example">
       <div class="example__wrapper">
         <h2 class="example__title">Живой пример</h2>
+        <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
         <div class="example__stats stats">
           <dl class="stats__list">
             <div class="stats__item">
               <dt class="stats__number">50 кг</dt>
-              <dd class="stats__description">снижение<br>веса</dd>
+              <dd class="stats__description">Снижение<br>веса</dd>
             </div>
             <div class="stats__item">
               <dt class="stats__number">60 дней</dt>
-              <dd class="stats__description">затрачено<br>времени</dd>
+              <dd class="stats__description">Затрачено<br>времени</dd>
             </div>
           </dl>
           <div class="stats__total-price">Затраты на питание: 15 000 руб.</div>
@@ -123,10 +131,8 @@
 
   <footer class="page-footer">
     <div class="page-footer__top footer-address">
-      <div class="footer-address__wrapper">
-        <h2 class="footer-address__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <div class="footer-address__text">ул. Большая Конюшенная, д. 19/8 Са нкт-Петербург</div>
-      </div>
+      <h2 class="footer-address__title">Приглашаем к сотрудничеству дилеров!</h2>
+      <span class="footer-address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</span>
     </div>
     <div class="page-footer__middle footer-map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003203!2d30.32085871622241!3d59.93871916905401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1637764831309!5m2!1sru!2sru" style="border:0; width:100vw; height:100%;" allowfullscreen="" loading="lazy">
