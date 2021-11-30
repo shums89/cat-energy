@@ -1,5 +1,5 @@
 .page-footer__bottom {
-  .p-tb(39; 22);
+  padding-top: 39px;
   background-color: @white-white-smoke;
 }
 
@@ -8,4 +8,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.page-footer__bottom-wrapper > div {
+  width: @mobile;
+  border-bottom: 1px solid @gainsboro-dark;
+}
+
+.page-footer__bottom-wrapper > div:last-child {
+  border-bottom: none;
 }
