@@ -1,0 +1,29 @@
+.main-nav {
+  position: relative;
+  .wrap(@mobile);
+}
+
+.main-nav__toggle {
+  .pseudo();
+  top: -45px;
+  right: 2px;
+  width: 18px;
+  height: 18px;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-nav__item {
+  .center();
+  .font(n; 500; 20; 20);
+}
+
+.main-nav__link {
+  display: block;
+  .p-tb(22;22);
+  text-transform: uppercase;
+}

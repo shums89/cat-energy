@@ -1,0 +1,65 @@
+.osward() {
+  font-family: "Oswald", "Arial", sans-serif;
+}
+
+.arial() {
+  font-family: "Arial", sans-serif;
+}
+
+.font(@fst: n; @fw: 400; @fsz: 14; @lh: 18) when (@fst = n) {
+  font-style: normal;
+  .font-numeric(@fw; @fsz; @lh);
+}
+
+.font(@fst: n; @fw: 400; @fsz: 14; @lh: 18) when (@fst = i) {
+  font-style: italic;
+  .font-numeric(@fw; @fsz; @lh);
+}
+
+.font-numeric(@fw: 400; @fsz: 14; @lh: 18) {
+  font-weight: @fw;
+  font-size: ~"@{fsz}px";
+  line-height: ~"@{lh}px";
+}
+
+.pseudo(@pos: absolute; @content: '') {
+  content: @content;
+  position: @pos;
+}
+
+.center() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.m-tb(@top; @bottom) {
+  margin-top: ~"@{top}px";
+  margin-bottom: ~"@{bottom}px";
+}
+
+.m-lr(@left; @right) {
+  margin-left: ~"@{left}px";
+  margin-right: ~"@{right}px";
+}
+
+.p-tb(@top; @bottom) {
+  padding-top: ~"@{top}px";
+  padding-bottom: ~"@{bottom}px";
+}
+
+.p-lr(@left; @right) {
+  padding-left: ~"@{left}px";
+  padding-right: ~"@{right}px";
+}
+
+.zero-mp() {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap(@width) {
+  width: @width;
+  margin: 0 auto;
+  padding: 0;
+}
+
