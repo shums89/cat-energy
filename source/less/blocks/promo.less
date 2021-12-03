@@ -1,9 +1,10 @@
 .promo {
   height: 480px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    color: @black;
+  }
 }
 
 .promo__wrapper {
@@ -12,13 +13,32 @@
   background-image: linear-gradient(@green-apple-alpha-050, @green-apple-alpha-050), url("../../img/promo-background.jpg");
   background-repeat: no-repeat;
   background-position: center top;
+
+  @media (min-width: @tablet-width) {
+    .wrap(@tablet);
+    height: 200px;
+    background-color: transparent;
+    background-image: none;
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrap(@desktop);
+  }
 }
 
 .promo__title {
   .wrap(@mobile);
   .font(n; 400; 36; 36);
   text-align: center;
-  .m-tb(27; 25);
+  margin-bottom: 25px;
+  padding-top: 26px;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    text-align: left;
+    margin-bottom: 41px;
+  }
 }
 
 .promo__slogan {
@@ -26,6 +46,12 @@
   .font(n; 400; 14; 14);
   text-align: center;
   margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    text-align: left;
+    margin-bottom: 20px;
+  }
 }
 
 .promo__image {
@@ -41,4 +67,12 @@
   .wrap(@mobile);
   text-align: center;
   .p-tb(11; 11);
+  color: @white;
+
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 }

@@ -1,4 +1,16 @@
 .page-header {
+  .wrap(@mobile);
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    .wrap(@tablet);
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrap(@desktop);
+    flex-direction: row;
+  }
 }

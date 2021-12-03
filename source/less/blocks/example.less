@@ -1,10 +1,27 @@
 .example {
   background-color: @white-white-smoke-light;
   .p-tb(27; 25);
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+    padding-top: 43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 58px;
+  }
 }
 
 .example__wrapper {
   .wrap(@mobile);
+
+  @media (min-width: @tablet-width) {
+    .wrap(@tablet);
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrap(@desktop);
+  }
 }
 
 .example__stats {
@@ -15,6 +32,10 @@
   .font(n; 400; 36; 40);
   .zero-mp();
   margin-bottom: 33px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 63px;
+  }
 }
 
 .example__text {
