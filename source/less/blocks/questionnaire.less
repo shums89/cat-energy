@@ -1,10 +1,24 @@
 .questionnaire__wrapper {
   .wrap(@mobile);
   margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    .wrap(@tablet);
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrap(@desktop);
+    margin-bottom: 82px;
+  }
 }
 
 .questionnaire__title {
   .font(n; 400; 14; 18);
   text-transform: uppercase;
   margin-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    .font(n; 400; 20; 30);
+  }
 }

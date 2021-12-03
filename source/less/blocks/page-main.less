@@ -2,4 +2,15 @@
   .wrap(@mobile);
   .font(n; 400; 36; 36);
   .m-tb(27; 37);
+
+  @media (min-width: @tablet-width) {
+    .wrap(@tablet);
+    .font(n; 400; 60; 60);
+    .m-tb(50; 54);
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrap(@desktop);
+    .m-tb(52; 56);
+  }
 }
