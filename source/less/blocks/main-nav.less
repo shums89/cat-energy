@@ -50,7 +50,9 @@
 }
 
 .main-nav__item--current {
-  border-bottom: 2px solid @green-apple;
+  @media (min-width: @tablet-width) {
+    border-bottom: 2px solid @green-apple;
+  }
 }
 
 .main-nav__link {
