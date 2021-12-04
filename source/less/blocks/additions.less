@@ -1,27 +1,105 @@
+// .catalog__additional-wrapper {
+//   @media (min-width: @desktop-width) {
+//     .wrap(@desktop);
+//     display: flex;
+//   }
+// }
+
 .additions {
   .wrap(@mobile);
-  .m-tb(25; 39);
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    .wrap(@tablet);
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrap(@desktop);
+    margin-bottom: 86px;
+  }
 }
 
 .additions__title {
   .font(n; 400; 24; 24);
   margin: 0;
-  padding-bottom: 36px;
+  margin-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    .font(n; 400; 36; 36);
+    margin-bottom: 80px;
+  }
 }
 
-.additions__item {
+.additions__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.additions__list {
+  margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 69px;
+    width: 896px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.addition {
   .p-tb(13; 19);
   border-top: 1px solid @white-white-smoke-dark;
+
+  @media (min-width: @tablet-width) {
+    padding: 26px 38px 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0 17px;
+  }
 }
 
-.additions__item:last-child {
+.addition:last-child {
   border-bottom: 1px solid @white-white-smoke-dark;
+}
+
+.addition__data {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    align-items: center;
+    width: 100%;
+    padding-right: 38px;
+    display: grid;
+    grid-template-columns: 1fr 288px;
+  }
 }
 
 .addition__title {
   .font(n; 400; 16; 16);
   text-transform: uppercase;
   .m-tb(0; 13);
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    .font(n; 400; 20; 20);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 325px;
+  }
 }
 
 .addition__list {
@@ -31,6 +109,11 @@
   .m-tb(0; 15);
   .arial();
   .font(n; 400; 14; 14);
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    .font(n; 400; 16; 20);
+  }
 }
 
 .addition__buy {
@@ -38,4 +121,8 @@
   .p-tb(10; 10);
   color: @white;
   background-color: @green-apple;
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+  }
 }
