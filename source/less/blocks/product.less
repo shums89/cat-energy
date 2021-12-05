@@ -27,7 +27,6 @@
     margin: 0 0 59px;
     padding: 0 37px 0;
     width: 324px;
-    height: 100%;
     border: none;
     background-image: linear-gradient(@white 81px, @white-white-smoke 81px);
   }
@@ -149,7 +148,7 @@
 
 .product-all {
   @media (min-width: @tablet-width) {
-    padding-top: 81px;
+    margin-top: 81px;
   }
 }
 
@@ -157,6 +156,7 @@
   @media (min-width: @tablet-width) {
     background-image: none;
     border: 1px solid @white-white-smoke;
+    height: calc(100% - 81px);
   }
 }
 

@@ -11,3 +11,12 @@
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 }
+
+.page__body--background {
+  @media (min-width: @desktop-width) {
+    background-image: linear-gradient(to right, transparent 50%, @green-apple 50%);
+    background-size: auto 694px;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}

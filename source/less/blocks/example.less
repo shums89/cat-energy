@@ -4,7 +4,8 @@
 
   @media (min-width: @tablet-width) {
     background-color: transparent;
-    padding-top: 43px;
+    padding: 0;
+    background-image: linear-gradient(to top, @white-white-smoke-light 462px, transparent 462px);
   }
 
   @media (min-width: @desktop-width) {
@@ -21,11 +22,15 @@
 
   @media (min-width: @desktop-width) {
     .wrap(@desktop);
+    display: flex;
+    justify-content: space-between;
   }
 }
 
-.example__stats {
-  margin-bottom: 42px;
+.example__data {
+  @media (min-width: @desktop-width) {
+    width: 436px;
+  }
 }
 
 .example__title {
@@ -35,6 +40,11 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 63px;
+    .font(n; 400; 60; 60);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 146px;
   }
 }
 
@@ -42,20 +52,119 @@
   .arial();
   .font(n; 400; 14; 18);
   .zero-mp();
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    .font(n; 400; 16; 24);
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 69px;
+  }
+}
+
+.stats {
+  margin-bottom: 42px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 59px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.stats__list {
+  display: flex;
+  justify-content: space-between;
+  .m-tb(0; 34);
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 60px;
+  }
+}
+
+.stats__item {
+  position: relative;
+  width: 124px;
+  height: 56px;
+  border: 1px solid @grey-very-light-grey;
+  border-radius: 3px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 42px;
+    width: 162px;
+    height: 72px;
+  }
 }
 
 .stats__number {
   .font(n; 400; 24; 24);
   text-transform: uppercase;
+  padding-top: 14px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    .font(n; 400; 30; 37);
+  }
 }
 
 .stats__description {
   .arial();
   .font(n; 400; 12; 12);
+  position: absolute;
+  left: calc(50% - 43px);
+  bottom: -16px;
+  width: 87px;
+  margin: 0;
+  .p-lr(10; 10);
   text-transform: lowercase;
+  text-align: center;
+  background-color: @white-white-smoke-light;
+
+  @media (min-width: @tablet-width) {
+    .font(n; 400; 14; 14);
+    width: 142px;
+    bottom: -6px;
+    left: calc(50% - 71px);
+    padding: 0;
+    background-color: @white;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @white-white-smoke-light;
+  }
 }
 
 .stats__total-price {
   .font(n; 400; 14; 20);
   text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    .font(n; 400; 20; 27);
+    width: 174px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.compare {
+  @media (min-width: @tablet-width) {
+    height: 620px;
+  }
 }

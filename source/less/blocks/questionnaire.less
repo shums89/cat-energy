@@ -1,10 +1,10 @@
 .questionnaire__wrapper {
-  .wrap(@mobile);
   margin-bottom: 32px;
 
   @media (min-width: @tablet-width) {
     .wrap(@tablet);
     margin-bottom: 72px;
+    padding-right: 36px;
   }
 
   @media (min-width: @desktop-width) {
@@ -14,11 +14,13 @@
 }
 
 .questionnaire__title {
+  .wrap(@mobile);
   .font(n; 400; 14; 18);
   text-transform: uppercase;
   margin-bottom: 37px;
 
   @media (min-width: @tablet-width) {
+    width: 100%;
     .font(n; 400; 20; 30);
   }
 }

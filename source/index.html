@@ -8,7 +8,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="page__body">
+<body class="page__body page__body--background">
   <header class="page-header">
     <div class="page-header__logo">
       <div class="page-header__logo-wrapper">
@@ -105,25 +105,31 @@
 
     <section class="example">
       <div class="example__wrapper">
-        <h2 class="example__title">Живой пример</h2>
-        <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <div class="example__stats stats">
-          <dl class="stats__list">
-            <div class="stats__item">
-              <dt class="stats__number">50 кг</dt>
-              <dd class="stats__description">Снижение<br>веса</dd>
-            </div>
-            <div class="stats__item">
-              <dt class="stats__number">60 дней</dt>
-              <dd class="stats__description">Затрачено<br>времени</dd>
-            </div>
-          </dl>
-          <div class="stats__total-price">Затраты на питание: 15 000 руб.</div>
+        <div class="example__data">
+          <h2 class="example__title">Живой пример</h2>
+          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и <nobr>по-прежнему</nobr> спит по 16 часов в день.</p>
+          <div class="example__stats stats">
+            <dl class="stats__list">
+              <div class="stats__item">
+                <dt class="stats__number">50 кг</dt>
+                <dd class="stats__description">Снижение веса</dd>
+              </div>
+              <div class="stats__item">
+                <dt class="stats__number">60 дней</dt>
+                <dd class="stats__description">Затрачено времени</dd>
+              </div>
+            </dl>
+            <div class="stats__total-price">Затраты на питание: 15 000 руб.</div>
+          </div>
         </div>
         <div class="example__compare compare slider">
           <ul class="compare__list">
-            <li class="compare__item compare__item--before compare__item--current"><img src="img/cat-fat.png" width="310" height="232" alt="Фото кота до приема Cat Energy"></li>
-            <li class="compare__item compare__item--after"><img src="img/cat-skinny.png" width="251" height="240" alt="Фото кота после курса приема Cat Energy"></li>
+            <li class="compare__item compare__item--before compare__item--current">
+              <img src="img/cat-fat.png" width="310" height="232" alt="Фото кота до приема Cat Energy">
+            </li>
+            <li class="compare__item compare__item--after visually-hidden">
+              <img src="img/cat-skinny.png" width="251" height="240" alt="Фото кота после курса приема Cat Energy">
+            </li>
           </ul>
           <p class="compare__toggles slider__toggles">
             <button class="slider__toggle slider__toggle--current" type="button">Было</button>
