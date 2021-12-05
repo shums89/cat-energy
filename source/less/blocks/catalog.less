@@ -6,4 +6,14 @@
   .wrap(@mobile);
   .font(n; 400; 36; 36);
   .m-tb(27; 41);
+
+  @media (min-width: @tablet-width) {
+    .wrap(@tablet);
+    .font(n; 400; 60; 60);
+    .m-tb(50; 83);
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrap(@desktop);
+  }
 }

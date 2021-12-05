@@ -1,3 +1,13 @@
 .products {
   margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    .wrap(@tablet);
+    margin-bottom: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrap(@desktop);
+    margin-bottom: 76px;
+  }
 }

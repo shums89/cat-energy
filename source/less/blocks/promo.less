@@ -1,44 +1,101 @@
 .promo {
-  height: 480px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  min-height: 480px;
+  margin-bottom: 22px;
   color: @white;
+  background-image:
+    linear-gradient(@green-apple-alpha-050 302px, transparent 302px),
+    url("../../img/promo-background.jpg"),
+    linear-gradient(@green-apple 302px, transparent 302px);
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @media (min-width: @tablet-width) {
+    min-height: 690px;
+    color: @black;
+    background-image: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 590px;
+    margin-bottom: 82px;
+  }
 }
 
 .promo__wrapper {
-  height: 302px;
-  background-color: @green-apple;
-  background-image: linear-gradient(@green-apple-alpha-050, @green-apple-alpha-050), url("../../img/promo-background.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
+  position: relative;
+  .wrap(@mobile);
+  padding-top: 27px;
+
+  @media (min-width: @tablet-width) {
+    .wrap(@tablet);
+    padding-left: 87px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrap(@desktop);
+    padding-left: 80px;
+  }
 }
 
 .promo__title {
-  .wrap(@mobile);
   .font(n; 400; 36; 36);
   text-align: center;
-  .m-tb(27; 25);
+  .m-tb(0; 25);
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    .font(n; 400; 60; 60);
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 82px;
+  }
 }
 
 .promo__slogan {
-  .wrap(@mobile);
+  .m-tb(0; 29);
   .font(n; 400; 14; 14);
   text-align: center;
-  margin-bottom: 29px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    text-align: left;
+    margin-bottom: 49px;
+  }
 }
 
 .promo__image {
-  .wrap(@mobile);
   width: 280px;
   height: 270px;
   display: block;
   .center();
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 201px;
+    left: 0;
+    width: @tablet;
+    height: 490px;
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop;
+    top: 0;
+    left: 125px;
+  }
 }
 
 .promo__link {
   background-color: @green-apple;
-  .wrap(@mobile);
   text-align: center;
   .p-tb(11; 11);
+  color: @white;
+
+  @media (min-width: @tablet-width) {
+    width: 244px;
+  }
 }

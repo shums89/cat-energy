@@ -1,18 +1,37 @@
 .present {
   .wrap(@mobile);
-  min-height: 289px;
+  height: 289px;
   padding: 58px 10px 43px 10px;
   color: @white;
   background-color: @green-apple;
   background-image: url("../img/present.jpg");
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    .wrap(@tablet);
+    min-height: 200px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 289px;
+    margin: 0;
+    flex-direction: column;
+  }
 }
 
 .present__img {
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .present__title {
@@ -20,4 +39,12 @@
   text-align: center;
   .arial();
   .font(n; 400; 16; 20);
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+  }
 }
