@@ -1,6 +1,4 @@
 .page-header__logo {
-  border-bottom: 1px solid @white-white-smoke-dark;
-
   @media (min-width: @tablet-width) {
     border: none;
   }
@@ -8,20 +6,31 @@
 
 .page-header__logo-wrapper {
   .wrap(@mobile);
-  height: 72px;
-  display: grid;
-  grid-template-columns: 34px 1fr 18px;
+  display: flex;
+  justify-content: start;
   align-items: center;
-  .p-lr(2; 2);
 
   @media (min-width: @tablet-width) {
     width: 174px;
+    height: 54px;
+    margin-right: 20px;
     display: flex;
     justify-content: space-between;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 220px;
+    height: 59px;
+    margin-right: 30px;
+  }
 }
 
-.page-header__logo-text {
-  display: block;
-  .center();
+.page-header__logo-text-link {
+  flex-grow: 1;
+  margin-right: 30px;
+  padding: 24px 10px 24px 57px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 12px;
+  }
 }
