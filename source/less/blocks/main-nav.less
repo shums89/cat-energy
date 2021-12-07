@@ -23,6 +23,10 @@
 }
 
 @media (max-width: @mobile-width-only) {
+  .main-nav--opened {
+    margin-top: 5px;
+  }
+
   .main-nav--closed .main-nav__item {
     display: none;
   }
@@ -68,7 +72,6 @@
 
   &::before {
     transform: rotate(45deg);
-    box-shadow: none;
   }
 
   &::after {
@@ -117,6 +120,15 @@
   display: block;
   .p-tb(22; 22);
   text-transform: uppercase;
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     .p-tb(18; 12);

@@ -33,7 +33,7 @@
   background-color: @white-white-smoke;
   height: 266px;
   margin-bottom: 20px;
-  padding: 30px 33px 22px 20px;
+  padding: 30px 20px 22px 20px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -73,50 +73,115 @@
 
 .programs__item-img {
   position: absolute;
-  top: 24px;
-  left: 22px;
-  width: 50px;
-  height: 50px;
-  background-color: @green-apple;
-  border-radius: 50%;
+
+  &.cat-slim {
+    top: 21px;
+    left: 22px;
+    width: 50px;
+    height: 53px;
+  }
+
+  &.cat-pro {
+    top: 24px;
+    left: 13px;
+    width: 67px;
+    height: 50px;
+  }
 
   @media (min-width: @tablet-width) {
-    top: 92px;
-    left: auto;
-    right: 62px;
-    width: 200px;
-    height: 200px;
+    &.cat-slim {
+      top: 92px;
+      left: auto;
+      right: 62px;
+      width: 200px;
+      height: 200px;
+    }
+
+    &.cat-pro {
+      top: 91px;
+      left: auto;
+      right: 28px;
+      width: 268px;
+      height: 200px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    top: 47px;
-    left: 52px;
-    right: auto;
-    width: 100px;
-    height: 100px;
+    &.cat-slim {
+      top: 47px;
+      left: 52px;
+      right: auto;
+      width: 100px;
+      height: 100px;
+    }
+
+    &.cat-pro {
+      top: 47px;
+      left: 33px;
+      right: auto;
+      width: 134px;
+      height: 100px;
+    }
   }
 }
 
 .programs__item-description {
   .arial();
   .font(n; 400; 14; 18);
-  .m-tb(0; 23);
+  .m-tb(0; 19);
+  padding-bottom: 23px;
+  border-bottom: 1px solid @gainsboro-dark;
+
+  & .tablet {
+    display: none;
+  }
 
   @media (min-width: @tablet-width) {
     .font(n; 400; 16; 24);
     margin-bottom: 48px;
+    border: none;
+
+    & .tablet {
+      display: block;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 23px;
+
+    & .tablet {
+      display: none;
+    }
   }
 }
 
 .program__item-link {
+  position: relative;
   .font(n; 400; 16; 16);
   text-transform: uppercase;
-  border-top: 1px solid @gainsboro-dark;
-  padding-top: 15px;
+  width: max-content;
+  max-width: calc(100% - 47px);
+  text-align: right;
+
+  &::after {
+    .pseudo();
+    top: calc(50% - 6px);
+    left: calc(100% + 17px);
+    width: 32px;
+    height: 12px;
+    background-image: url("../../img/icons/icon_arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-image: url("../../img/icons/icon_arrow_long.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     .font(n; 400; 20; 30);

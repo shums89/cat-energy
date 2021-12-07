@@ -14,8 +14,15 @@
 
 .page__body--background {
   @media (min-width: @desktop-width) {
-    background-image: linear-gradient(to right, transparent 50%, @green-apple 50%);
-    background-size: auto 694px;
+    background-image:
+      linear-gradient(to right, transparent 50%, @green-apple-alpha-050 50%),
+      url("../../img/promo-background-desktop.jpg"),
+      linear-gradient(to right, transparent 50%, @green-apple 50%);
+    background-position:
+      0 0,
+      50vw top,
+      0 0;
+    background-size: auto 696px;
     background-repeat: no-repeat;
     z-index: -1;
   }
