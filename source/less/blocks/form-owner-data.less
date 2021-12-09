@@ -1,9 +1,7 @@
 .owner-data {
-  .wrap(@mobile);
   margin-bottom: 23px;
 
   @media (min-width: @tablet-width) {
-    width: 100%;
     margin-bottom: 65px;
   }
 
@@ -12,21 +10,30 @@
   }
 }
 
-.owner-info__list {
-  @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 80px;
+.owner-info__title {
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+
+    & br {
+      display: none;
+    }
   }
 }
 
-.owner-info__title {
-  margin-bottom: 35px;
-  max-width: 183px;
+.owner-info__list {
+  .wrap(@mobile);
 
   @media (min-width: @tablet-width) {
-    max-width: none;
-    margin-bottom: 76px;
+    .wrap(@tablet);
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrap(@desktop);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 80px;
   }
 }
 
@@ -62,6 +69,7 @@
   flex-grow: 1;
   background-repeat: no-repeat;
   background-position-y: 50%;
+  padding-right: 45px;
 
   &[type="email"] {
     background-image: url("../../img/icons/email-black.svg");
@@ -90,6 +98,8 @@
   }
 
   @media (min-width: @tablet-width) {
+    padding-right: 50px;
+
     &[type="email"] {
       background-position-x: calc(100% - 19px);
     }

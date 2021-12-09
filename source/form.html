@@ -80,7 +80,11 @@
             </li>
             <li class="form__item form-item owner-data">
               <fieldset class="form-item__owner-info owner-info form__fieldset">
-                <legend class="owner-info__title title-group">Контактные данные (владельца кота)</legend>
+                <div class="owner-info__title-container title-group__container">
+                  <div class="owner-info__title-wrapper title-group__wrapper">
+                    <legend class="owner-info__title title-group">Контактные данные <br>(владельца кота)</legend>
+                  </div>
+                </div>
                 <ul class="owner-info__list">
                   <li class="owner-info__item">
                     <input class="owner-info__input input-text" id="field-email" type="email" name="email" placeholder="кuklachev@gmail.com" required>
@@ -95,13 +99,23 @@
             </li>
             <li class="form__item form-item comment-data">
               <div class="form-item__comment comment">
-                <label class="comment__title title-group" for="comment-text">Комментарий</label>
-                <textarea class="comment__text textarea" id="comment-text" name="text" placeholder="Расскажите обо всех повадках кота"></textarea>
+                <div class="comment__title-container title-group__container">
+                  <div class="comment__title-wrapper title-group__wrapper">
+                    <label class="comment__title title-group" for="comment-text">Комментарий</label>
+                  </div>
+                </div>
+                <div class="comment__text-wrapper">
+                  <textarea class="comment__text textarea" id="comment-text" name="text" placeholder="Расскажите обо всех повадках кота"></textarea>
+                </div>
               </div>
             </li>
             <li class="form__item form-item other-data">
               <fieldset class="form-item__other other form__fieldset">
-                <legend class="other__title title-group">Дополнительно</legend>
+                <div class="other__title-container title-group__container">
+                  <div class="other__title-wrapper title-group__wrapper">
+                    <legend class="other__title title-group">Дополнительно</legend>
+                  </div>
+                </div>
                 <ul class="other__list">
                   <li class="other__item other-item">
                     <input class="other__input input-checkbox visually-hidden" type="checkbox" name="other" value="sweetener" id="field-sweetener" checked>
