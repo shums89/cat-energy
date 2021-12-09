@@ -1,9 +1,14 @@
 .input-text {
-  border: 1px solid @gainsboro;
-  padding: 13px 5px 13px 15px;
+  border: 1px solid @white-gainsboro;
+  padding: 13px 45px 14px 15px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    padding: 14px 50px 14px 16px;
+  }
 }
 
 .input-text::placeholder {
   text-transform: uppercase;
+  color: @grey-charcoal;
 }

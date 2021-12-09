@@ -11,14 +11,9 @@
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__logo">
-      <div class="page-header__logo-wrapper">
-        <a href="index.html">
-          <img class="page-header__logo-image" src="img/icons/logo-image-mobile.svg" width="34" height="38" alt="">
-        </a>
-        <a href="index.html">
-          <img class="page-header__logo-text" src="img/icons/logo-text-mobile.svg" width="101" height="18" alt="">
-        </a>
-      </div>
+      <a class="page-header__logo-link" href="index.html">
+        <img class="page-header__logo" src="img/logo-mobile.png" width="191" height="38" alt="">
+      </a>
     </div>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
@@ -52,11 +47,11 @@
                 <ul class="cat-info__list">
                   <li class="cat-info__item">
                     <label class="cat-info__label" for="field-name">Имя:*</label>
-                    <input class="cat-info__input input-text" id="field-name" type="text" name="name" placeholder="Барсик">
+                    <input class="cat-info__input input-text" id="field-name" type="text" name="name" placeholder="Барсик" pattern="^[A-Za-zА-Яа-яЁё\s]+$" required>
                   </li>
                   <li class="cat-info__item">
                     <label class="cat-info__label" for="field-weight">Вес (кг):*</label>
-                    <input class="cat-info__input input-text" id="field-weight" type="number" name="weight" placeholder="7">
+                    <input class="cat-info__input input-text" id="field-weight" type="number" name="weight" placeholder="7" required>
                   </li>
                   <li class="cat-info__item">
                     <label class="cat-info__label" for="field-age">Возраст (лет):</label>
@@ -69,15 +64,15 @@
                 <legend class="purpose__title visually-hidden">Цель:</legend>
                 <ul class="purpose__list">
                   <li class="purpose__item">
-                    <input class="purpose__input" type="radio" name="purpose" value="slim" id="field-slim" checked>
+                    <input class="purpose__input input-radio visually-hidden" type="radio" name="purpose" value="slim" id="field-slim" checked>
                     <label class="purpose__label" for="field-slim">Похудение</label>
                   </li>
                   <li class="purpose__item">
-                    <input class="purpose__input" type="radio" name="purpose" value="pro" id="field-pro">
+                    <input class="purpose__input input-radio visually-hidden" type="radio" name="purpose" value="pro" id="field-pro">
                     <label class="purpose__label" for="field-pro">Набор массы</label>
                   </li>
                   <li class="purpose__item">
-                    <input class="purpose__input" type="radio" name="purpose" value="none" id="field-none">
+                    <input class="purpose__input input-radio visually-hidden" type="radio" name="purpose" value="none" id="field-none">
                     <label class="purpose__label" for="field-none">Не знаю (нужен ваш совет)</label>
                   </li>
                 </ul>
@@ -88,12 +83,12 @@
                 <legend class="owner-info__title title-group">Контактные данные (владельца кота)</legend>
                 <ul class="owner-info__list">
                   <li class="owner-info__item">
+                    <input class="owner-info__input input-text" id="field-email" type="email" name="email" placeholder="кuklachev@gmail.com" required>
                     <label class="owner-info__label" for="field-email">E-mail:*</label>
-                    <input class="owner-info__input input-text" id="field-email" type="email" name="email" placeholder="кuklachev@gmail.com">
                   </li>
                   <li class="owner-info__item">
+                    <input class="owner-info__input input-text" id="field-phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
                     <label class="owner-info__label" for="field-phone">Телефон:*</label>
-                    <input class="owner-info__input input-text" id="field-phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
                   </li>
                 </ul>
               </fieldset>
@@ -109,19 +104,19 @@
                 <legend class="other__title title-group">Дополнительно</legend>
                 <ul class="other__list">
                   <li class="other__item other-item">
-                    <input class="input-checkbox" type="checkbox" name="other" value="sweetener" id="field-sweetener" checked>
+                    <input class="other__input input-checkbox visually-hidden" type="checkbox" name="other" value="sweetener" id="field-sweetener" checked>
                     <label class="other__label" for="field-sweetener">Сахарозаменитель</label>
                   </li>
                   <li class="other__item other-item">
-                    <input class="input-checkbox" type="checkbox" name="other" value="water" id="field-water">
+                    <input class="other__input input-checkbox visually-hidden" type="checkbox" name="other" value="water" id="field-water">
                     <label class="other__label" for="field-water">Питьевая вода</label>
                   </li>
                   <li class="other__item other-item">
-                    <input class="input-checkbox" type="checkbox" name="other" value="milk" id="field-milk">
+                    <input class="other__input input-checkbox visually-hidden" type="checkbox" name="other" value="milk" id="field-milk">
                     <label class="other__label" for="field-milk">Молоко</label>
                   </li>
                   <li class="other__item other-item">
-                    <input class="input-checkbox" type="checkbox" name="other" value="vitamins" id="field-vitamins">
+                    <input class="other__input input-checkbox visually-hidden" type="checkbox" name="other" value="vitamins" id="field-vitamins">
                     <label class="other__label" for="field-vitamins">Витамины</label>
                   </li>
                 </ul>
@@ -167,27 +162,24 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-                <img src="img/icons/logo-vk.svg" width="23" height="16" alt="">
+                <span class="visually-hidden">Наша страница на сайте Вконтакте</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
-                <img src="img/icons/logo-instagram.svg" width="16" height="16" alt="">
+                <span class="visually-hidden">Наша страница на сайте Инстаграм</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-                <img src="img/icons/logo-facebook.svg" width="22" height="22" alt="">
+                <span class="visually-hidden">Наша страница на сайте Фейсбук</span>
               </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copyright__logo-text" src="img/icons/logo-htmlacademy-text.svg" width="114" height="18" alt="">
-          </a>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copyright__logo-image" src="img/icons/logo-htmlacademy-image.svg" width="27" height="34" alt="">
+            <img class="copyright__logo" src="img/icons/logo-htmlacademy-text.svg" width="114" height="18" alt="">
           </a>
         </div>
       </div>
