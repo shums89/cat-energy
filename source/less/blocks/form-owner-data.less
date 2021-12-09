@@ -1,0 +1,111 @@
+.owner-data {
+  margin-bottom: 23px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 69px;
+  }
+}
+
+.owner-info__title {
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+
+    & br {
+      display: none;
+    }
+  }
+}
+
+.owner-info__list {
+  .wrap(@mobile);
+
+  @media (min-width: @tablet-width) {
+    .wrap(@tablet);
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrap(@desktop);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 80px;
+  }
+}
+
+.owner-info__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.owner-info__item:last-child {
+  margin-bottom: 0;
+}
+
+.owner-info__label {
+  margin-right: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 18px;
+  }
+}
+
+.owner-info__input {
+  order: 2;
+  flex-grow: 1;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  padding-right: 45px;
+
+  &[type="email"] {
+    background-image: url("../../img/icons/email-black.svg");
+    background-position-x: calc(100% - 16px);
+
+    &:invalid:not(:placeholder-shown) {
+      background-image: url("../../img/icons/email-red.svg");
+    }
+
+    &:focus {
+      background-image: url("../../img/icons/email-green.svg");
+    }
+  }
+
+  &[type="tel"] {
+    background-image: url("../../img/icons/phone-black.svg");
+    background-position-x: calc(100% - 13px);
+
+    &:invalid:not(:placeholder-shown) {
+      background-image: url("../../img/icons/phone-red.svg");
+    }
+
+    &:focus {
+      background-image: url("../../img/icons/phone-green.svg");
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 50px;
+
+    &[type="email"] {
+      background-position-x: calc(100% - 19px);
+    }
+
+    &[type="tel"] {
+      background-position-x: calc(100% - 17px);
+    }
+  }
+}

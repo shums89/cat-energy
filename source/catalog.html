@@ -11,16 +11,11 @@
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__logo">
-      <div class="page-header__logo-wrapper">
-        <a href="index.html">
-          <img class="page-header__logo-image" src="img/icons/logo-image-mobile.svg" width="34" height="38" alt="">
-        </a>
-        <a href="index.html">
-          <img class="page-header__logo-text" src="img/icons/logo-text-mobile.svg" width="101" height="18" alt="">
-        </a>
-      </div>
+      <a class="page-header__logo-link" href="index.html">
+        <img class="page-header__logo" src="img/logo-mobile.png" width="191" height="38" alt="">
+      </a>
     </div>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
@@ -71,7 +66,7 @@
                 </tbody>
               </table>
             </div>
-            <a class="product__button product__buy button" href="#">Заказать</a>
+            <a class="product__button product__buy button button-action" href="#">Заказать</a>
           </div>
         </li>
         <li class="products__item product">
@@ -102,7 +97,7 @@
                 </tbody>
               </table>
             </div>
-            <a class="product__button product__buy button" href="#">Заказать</a>
+            <a class="product__button product__buy button button-action" href="#">Заказать</a>
           </div>
         </li>
         <li class="products__item product">
@@ -133,7 +128,7 @@
                 </tbody>
               </table>
             </div>
-            <a class="product__button product__buy button" href="#">Заказать</a>
+            <a class="product__button product__buy button button-action" href="#">Заказать</a>
           </div>
         </li>
         <li class="products__item product">
@@ -164,7 +159,7 @@
                 </tbody>
               </table>
             </div>
-            <a class="product__button product__buy button" href="#">Заказать</a>
+            <a class="product__button product__buy button button-action" href="#">Заказать</a>
           </div>
         </li>
         <li class="products__item product">
@@ -195,7 +190,7 @@
                 </tbody>
               </table>
             </div>
-            <a class="product__button product__buy button" href="#">Заказать</a>
+            <a class="product__button product__buy button button-action" href="#">Заказать</a>
           </div>
         </li>
         <li class="products__item product">
@@ -226,7 +221,7 @@
                 </tbody>
               </table>
             </div>
-            <a class="product__button product__buy button" href="#">Заказать</a>
+            <a class="product__button product__buy button button-action" href="#">Заказать</a>
           </div>
         </li>
         <li class="products__item product">
@@ -257,7 +252,7 @@
                 </tbody>
               </table>
             </div>
-            <a class="product__button product__buy button" href="#">Заказать</a>
+            <a class="product__button product__buy button button-action" href="#">Заказать</a>
           </div>
         </li>
         <li class="products__item product product-all">
@@ -274,8 +269,11 @@
     </section>
 
     <section class="catalog__additional-products additions">
-      <h2 class="additions__title">Дополнительные товары</h2>
-
+      <div class="additions__title-container title-group__container">
+        <div class="additions__title-wrapper title-group__wrapper">
+          <h2 class="additions__title title-group">Дополнительные товары</h2>
+        </div>
+      </div>
       <div class="additions__wrapper">
         <ul class="additions__list">
           <li class="additions__item addition">
@@ -286,7 +284,7 @@
                 <dd class="addition__price">200 р.</dd>
               </dl>
             </div>
-            <a class="addition__buy button" href="#">Заказать</a>
+            <a class="addition__buy button button-action" href="#">Заказать</a>
           </li>
           <li class="additions__item addition">
             <div class="addition__data">
@@ -296,7 +294,7 @@
                 <dd class="addition__price">50 р.</dd>
               </dl>
             </div>
-            <a class="addition__buy button" href="#">Заказать</a>
+            <a class="addition__buy button button-action" href="#">Заказать</a>
           </li>
           <li class="additions__item addition">
             <div class="addition__data">
@@ -306,7 +304,7 @@
                 <dd class="addition__price">100 р.</dd>
               </dl>
             </div>
-            <a class="addition__buy button" href="#">Заказать</a>
+            <a class="addition__buy button button-action" href="#">Заказать</a>
           </li>
           <li class="additions__item addition">
             <div class="addition__data">
@@ -316,7 +314,7 @@
                 <dd class="addition__price">300 р.</dd>
               </dl>
             </div>
-            <a class="addition__buy button" href="#">Заказать</a>
+            <a class="addition__buy button button-action" href="#">Заказать</a>
           </li>
         </ul>
 
@@ -357,32 +355,46 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-                <img src="img/icons/logo-vk.svg" width="23" height="16" alt="">
+                <span class="visually-hidden">Наша страница на сайте Вконтакте</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
-                <img src="img/icons/logo-instagram.svg" width="16" height="16" alt="">
+                <span class="visually-hidden">Наша страница на сайте Инстаграм</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-                <img src="img/icons/logo-facebook.svg" width="22" height="22" alt="">
+                <span class="visually-hidden">Наша страница на сайте Фейсбук</span>
               </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copyright__logo-text" src="img/icons/logo-htmlacademy-text.svg" width="114" height="18" alt="">
-          </a>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copyright__logo-image" src="img/icons/logo-htmlacademy-image.svg" width="27" height="34" alt="">
+            <img class="copyright__logo" src="img/icons/logo-htmlacademy-text.svg" width="114" height="18" alt="">
           </a>
         </div>
       </div>
     </div>
   </footer>
+
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 </body>
 
 </html>

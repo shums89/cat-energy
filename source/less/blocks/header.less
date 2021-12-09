@@ -1,18 +1,20 @@
 .page-header {
-  .wrap(@mobile);
   display: flex;
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
     .wrap(@tablet);
+    width: 85%;
+    max-width: @desktop;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 62px;
+    .m-tb(42; 62);
   }
 
   @media (min-width: @desktop-width) {
     .wrap(@desktop);
     flex-direction: row;
     margin-bottom: 32px;
+    .m-tb(53; 29);
   }
 }

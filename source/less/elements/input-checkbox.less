@@ -1,0 +1,42 @@
+.input-checkbox ~ label::before {
+  .pseudo();
+  top: calc(50% - 15px);
+  left: -46px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @grey-very-light-grey;
+
+  @media (min-width: @tablet-width) {
+    top: calc(50% - 20px);
+    left: -60px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.input-checkbox ~ label:hover::before {
+  border-color: @grey-silver;
+}
+
+.input-checkbox:checked ~ label::after {
+  .pseudo();
+  top: calc(50% - 14px);
+  left: -44px;
+  width: 26px;
+  height: 26px;
+  background-image: url("../../img/icons/tick.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  @media (min-width: @tablet-width) {
+    left: -53px;
+  }
+}
+
+.input-checkbox:disabled ~ label {
+  opacity: 0.3;
+
+  &::before {
+    border-color: @grey-silver;
+  }
+}

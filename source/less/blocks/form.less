@@ -1,6 +1,6 @@
 .form__list {
   .font(n; 400; 16; 18);
-  color: @charcoal;
+  color: @grey-charcoal;
 
   @media (min-width: @tablet-width) {
     .font(n; 400; 20; 30);
@@ -12,238 +12,32 @@
   border: none;
 }
 
-.cat-data {
-  margin-bottom: 26px;
-
-  @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 80px;
-  }
-}
-
-.cat-info {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 22px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid @grey-very-light-grey;
-
-  @media (min-width: @tablet-width) {
-    border-bottom: none;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 0;
-  }
-}
-
-.cat-info__list {
-  .wrap(@mobile);
-
-  @media (min-width: @tablet-width) {
-    width: 100%;
-  }
-}
-
-.cat-info__item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 13px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 20px;
-  }
-}
-
-.cat-info__item:last-child {
-  margin-bottom: 0;
-}
-
-.cat-info__label {
-  margin-right: 13px;
-  text-transform: uppercase;
-}
-
-.cat-info__input {
-  flex-grow: 1;
-}
-
-.purpose {
-  padding-bottom: 19px;
-  border-bottom: 1px solid @grey-very-light-grey;
-
-  @media (min-width: @tablet-width) {
-    border: 1px solid @gainsboro;
-    padding: 30px 10px 30px 87px;
-  }
-}
-
-.purpose__list {
-  .wrap(@mobile);
-
-  @media (min-width: @tablet-width) {
-    width: 100%;
-  }
-}
-
-.purpose__item {
-  margin-bottom: 13px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 23px;
-  }
-}
-
-.purpose__item:last-child {
-  margin-bottom: 0;
-}
-
-.purpose__label {
-  text-transform: uppercase;
-  margin-left: 45px;
-  .p-tb(6; 6);
-}
-
-.title-group {
-  .font(n; 400; 24; 26);
-  color: @black;
-
-  @media (min-width: @tablet-width) {
-    .font(n; 400; 36; 36);
-  }
-}
-
-.owner-data {
-  .wrap(@mobile);
-  margin-bottom: 23px;
-
-  @media (min-width: @tablet-width) {
-    width: 100%;
-  }
-}
-
-.owner-info__list {
-  @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 80px;
-  }
-}
-
-.owner-info__title {
-  margin-bottom: 35px;
-}
-
-.owner-info__item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 14px;
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 0;
-  }
-}
-
-.owner-info__item:last-child {
-  margin-bottom: 0;
-}
-
-.owner-info__label {
-  margin-right: 10px;
-}
-
-.owner-info__input {
-  flex-grow: 1;
-}
-
-.comment-data {
-  .wrap(@mobile);
-  margin-bottom: 22px;
-
-  @media (min-width: @tablet-width) {
-    width: 100%;
-  }
-}
-
-.comment__title {
-  display: block;
-  margin-bottom: 37px;
-}
-
-.comment__text {
-  width: 100%;
-  height: 150px;
-
-  @media (min-width: @tablet-width) {
-    height: 174px;
-  }
-}
-
-.other-data {
-  .wrap(@mobile);
-  margin-bottom: 34px;
-
-  @media (min-width: @tablet-width) {
-    width: 100%;
-  }
-}
-
-.other__title {
-  margin-bottom: 34px;
-}
-
-.other__list {
-  @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-}
-
-.other__label {
-  margin-left: 45px;
-  text-transform: uppercase;
-}
-
-.other__item {
-  margin-bottom: 13px;
-
-  @media (min-width: @tablet-width) {
-    width: 288px;
-    margin-bottom: 32px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 245px;
-  }
-}
-
-.other__item:last-child {
-  margin-bottom: 0;
-}
-
 .form__button-wrapper {
   .wrap(@mobile);
 
   @media (min-width: @tablet-width) {
-    width: 100%;
+    .wrap(@tablet);
     display: flex;
     justify-content: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrap(@desktop);
   }
 }
 
 .form__button {
-  color: @white;
-  background-color: @green-apple;
-  .p-tb(7; 7);
   width: @mobile;
+  .font(n; 400; 16; 20);
   margin-bottom: 21px;
+  .p-tb(10; 10);
 
   @media (min-width: @tablet-width) {
     width: 282px;
+    .font(n; 400; 20; 20);
     margin-right: 61px;
     margin-bottom: 0;
+    .p-tb(16; 16);
   }
 
   @media (min-width: @desktop-width) {

@@ -3,11 +3,15 @@
   margin-bottom: 22px;
   color: @white;
   background-image:
-    linear-gradient(@green-apple-alpha-050 302px, transparent 302px),
-    url("../../img/promo-background.jpg"),
-    linear-gradient(@green-apple 302px, transparent 302px);
+    linear-gradient(to right, @green-apple calc(50% - 200px), @green-apple-alpha-050 calc(50% - 160px), @green-apple-alpha-050 calc(50% + 160px), @green-apple calc(50% + 200px)),
+    url("../../img/promo-background-desktop.jpg"),
+    linear-gradient(@green-apple, @green-apple);
+  background-position:
+    0 0,
+    calc(50% - 35px) top,
+    0 0;
+  background-size: auto 302px;
   background-repeat: no-repeat;
-  background-position: center top;
 
   @media (min-width: @tablet-width) {
     min-height: 690px;
@@ -64,6 +68,7 @@
     width: auto;
     text-align: left;
     margin-bottom: 49px;
+    .font(n; 400; 20; 20);
   }
 }
 
@@ -90,12 +95,11 @@
 }
 
 .promo__link {
-  background-color: @green-apple;
   text-align: center;
   .p-tb(11; 11);
-  color: @white;
 
   @media (min-width: @tablet-width) {
     width: 244px;
+    .p-tb(14; 14);
   }
 }

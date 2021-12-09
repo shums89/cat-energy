@@ -1,0 +1,140 @@
+.main-nav {
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    max-width: 600px;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: -45px;
+  right: 20px;
+  display: block;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--opened {
+    margin-top: 5px;
+  }
+
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__item {
+    display: block;
+  }
+
+  .main-nav__item {
+    border-top: 1px solid @white-gainsboro-light;
+
+    &:last-child {
+      border-bottom: 1px solid @white-gainsboro-light;
+    }
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  .pseudo();
+  top: -2px;
+  right: 0;
+  width: 24px;
+  height: 2px;
+  background-color: @black;
+  box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 24px;
+    height: 2px;
+    background-color: @black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav__list {
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
+
+.main-nav__item {
+  .font(n; 500; 20; 20);
+
+  @media (min-width: @tablet-width) {
+    .font(n; 400; 18; 24);
+    margin-left: 35px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &--current {
+      border-bottom: 2px solid @green-apple;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .page__body--background & {
+      color: @white;
+
+      &--current {
+        border-bottom: 2px solid @white;
+      }
+    }
+  }
+}
+
+.main-nav__link {
+  display: block;
+  .p-tb(22; 22);
+  text-transform: uppercase;
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    .p-tb(18; 12);
+  }
+
+  @media (min-width: @desktop-width) {
+    .p-tb(16; 13);
+  }
+}
