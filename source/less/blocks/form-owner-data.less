@@ -67,7 +67,7 @@
     background-image: url("../../img/icons/email-black.svg");
     background-position-x: calc(100% - 16px);
 
-    &:invalid {
+    &:invalid:not(:placeholder-shown) {
       background-image: url("../../img/icons/email-red.svg");
     }
 
@@ -80,25 +80,13 @@
     background-image: url("../../img/icons/phone-black.svg");
     background-position-x: calc(100% - 13px);
 
-    &:invalid {
+    &:invalid:not(:placeholder-shown) {
       background-image: url("../../img/icons/phone-red.svg");
     }
 
     &:focus {
       background-image: url("../../img/icons/phone-green.svg");
     }
-  }
-
-  &:hover {
-    border-color: @grey-very-light-grey;
-  }
-
-  &:focus {
-    border: 2px solid @grey-charcoal;
-  }
-
-  &:invalid {
-    border: 2px solid @red-mona-lisa;
   }
 
   @media (min-width: @tablet-width) {

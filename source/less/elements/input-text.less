@@ -3,6 +3,18 @@
   padding: 13px 45px 14px 15px;
   text-transform: uppercase;
 
+  &:hover {
+    border-color: @grey-very-light-grey;
+  }
+
+  &:focus {
+    border: 2px solid @grey-charcoal;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border: 2px solid @red-mona-lisa;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 14px 50px 14px 16px;
   }

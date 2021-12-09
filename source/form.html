@@ -51,7 +51,7 @@
                   </li>
                   <li class="cat-info__item">
                     <label class="cat-info__label" for="field-weight">Вес (кг):*</label>
-                    <input class="cat-info__input input-text" id="field-weight" type="number" name="weight" placeholder="7" required>
+                    <input class="cat-info__input input-text" id="field-weight" type="text" name="weight" placeholder="7" pattern="[0-9,.]{1,5}" max="21" required>
                   </li>
                   <li class="cat-info__item">
                     <label class="cat-info__label" for="field-age">Возраст (лет):</label>
@@ -124,7 +124,7 @@
             </li>
           </ul>
           <div class="form__button-wrapper">
-            <button class="form__button button" type="submit">Отправить заявку</button>
+            <button class="form__button button button-action" type="submit">Отправить заявку</button>
             <div class="form__required">
               <span class="form__required-text">* — Обязательные поля</span>
             </div>
