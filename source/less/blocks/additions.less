@@ -21,13 +21,43 @@
 }
 
 .additions__title {
+  position: relative;
   .font(n; 400; 24; 24);
   margin: 0;
   margin-bottom: 36px;
+  display: inline-block;
+
+  &::before {
+    .pseudo();
+    top: 16px;
+    right: calc(100% + 20px);
+    width: 30vw;
+    height: 2px;
+    background-color: @green-apple;
+  }
+
+  &::after {
+    .pseudo();
+    top: 16px;
+    left: calc(100% + 20px);
+    width: 100vw;
+    height: 2px;
+    background-color: @green-apple;
+  }
 
   @media (min-width: @tablet-width) {
     .font(n; 400; 36; 36);
     margin-bottom: 80px;
+
+    &::before {
+      top: 22px;
+      right: calc(100% + 40px);
+    }
+
+    &::after {
+      top: 22px;
+      left: calc(100% + 40px);
+    }
   }
 }
 
@@ -120,6 +150,15 @@
   .p-tb(10; 10);
   color: @white;
   background-color: @green-apple;
+
+  &:hover,
+  &:focus {
+    background-color: @green-limeade;
+  }
+
+  &:active {
+    color: @white-alpha-030;
+  }
 
   @media (min-width: @desktop-width) {
     width: 244px;

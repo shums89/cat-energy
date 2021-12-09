@@ -144,6 +144,15 @@
 .product__buy {
   color: @white;
   background-color: @green-apple;
+
+  &:hover,
+  &:focus {
+    background-color: @green-limeade;
+  }
+
+  &:active {
+    color: @white-alpha-030;
+  }
 }
 
 .product-all {
@@ -204,6 +213,15 @@
 
 .product-all__button {
   background-color: @white-white-smoke;
+
+  &:hover,
+  &:focus {
+    background-color: @white-white-smoke-dark;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     .center();
