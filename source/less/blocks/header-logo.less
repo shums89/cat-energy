@@ -1,15 +1,8 @@
-.page-header__logo {
-  @media (min-width: @tablet-width) {
-    border: none;
-  }
-}
-
 .page-header__logo-link {
   .wrap(@mobile);
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  .p-tb(11; 17);
+  height: 38px;
+  display: block;
+  .m-tb(11; 17);
 
   &[href]:hover,
   &[href]:focus {
@@ -21,11 +14,10 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 174px;
+    width: auto;
+    margin: 0;
     height: 54px;
     margin-right: 20px;
-    display: flex;
-    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {

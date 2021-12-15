@@ -71,57 +71,59 @@
   }
 }
 
-.programs__item-img {
-  position: absolute;
+.programs__item::before {
+  .pseudo();
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
 
-  &.cat-slim {
-    top: 21px;
-    left: 22px;
-    width: 50px;
-    height: 53px;
-  }
-
-  &.cat-pro {
-    top: 24px;
-    left: 13px;
-    width: 67px;
-    height: 50px;
-  }
+.programs__item--slim::before {
+  top: 21px;
+  left: 22px;
+  width: 50px;
+  height: 53px;
+  background-image: url("../img/icons/cat-slim.svg");
+  background-size: contain;
 
   @media (min-width: @tablet-width) {
-    &.cat-slim {
-      top: 92px;
-      left: auto;
-      right: 62px;
-      width: 200px;
-      height: 200px;
-    }
-
-    &.cat-pro {
-      top: 91px;
-      left: auto;
-      right: 28px;
-      width: 268px;
-      height: 200px;
-    }
+    top: 92px;
+    left: auto;
+    right: 62px;
+    width: 200px;
+    height: 200px;
   }
 
   @media (min-width: @desktop-width) {
-    &.cat-slim {
-      top: 47px;
-      left: 52px;
-      right: auto;
-      width: 100px;
-      height: 100px;
-    }
+    top: 47px;
+    left: 52px;
+    right: auto;
+    width: 100px;
+    height: 100px;
+  }
+}
 
-    &.cat-pro {
-      top: 47px;
-      left: 33px;
-      right: auto;
-      width: 134px;
-      height: 100px;
-    }
+.programs__item--pro::before {
+  top: 24px;
+  left: 13px;
+  width: 67px;
+  height: 50px;
+  background-image: url("../img/icons/cat-pro.svg");
+  background-size: contain;
+
+  @media (min-width: @tablet-width) {
+    top: 91px;
+    left: auto;
+    right: 28px;
+    width: 268px;
+    height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 47px;
+    left: 33px;
+    right: auto;
+    width: 134px;
+    height: 100px;
   }
 }
 
@@ -169,14 +171,14 @@
     left: calc(100% + 17px);
     width: 32px;
     height: 12px;
-    background-image: url("../../img/icons/icon_arrow.svg");
+    background-image: url("../img/icons/arrow.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
   }
 
   &:hover::after,
   &:focus::after {
-    background-image: url("../../img/icons/icon_arrow_long.svg");
+    background-image: url("../img/icons/arrow_long.svg");
   }
 
   &:active {
