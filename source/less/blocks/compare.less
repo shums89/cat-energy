@@ -1,12 +1,128 @@
+.compare {
+  @media (min-width: @tablet-width) {
+    padding-bottom: 64px;
+  }
+}
+
+.compare__list {
+  width: 320px;
+  height: 240px;
+  margin: auto;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    .wrap(@tablet);
+    height: 520px;
+  }
+}
+
 .compare__item {
   display: none;
+  background-size: contain;
+
+  & img {
+    display: block;
+    margin: auto;
+  }
 
   &--current {
     display: block;
   }
+
+  @media (min-width: @tablet-width) {
+    & img {
+      width: auto;
+      height: 100%;
+    }
+  }
 }
 
-.slider__toggle {
+.compare__controls {
+  .wrap(@mobile);
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    .wrap(@tablet);
+  }
+}
+
+.compare__toggle {
+  display: block;
   .font(n; 400; 16; 20);
   text-transform: uppercase;
+  border: none;
+  background-color: inherit;
+  padding: 5px 0;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px dotted @black-alpha-024;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid @black-alpha-040;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
+  }
+}
+
+.compare__scale {
+  position: relative;
+  width: 84px;
+  height: 14px;
+  border: 1px solid @grey-very-light-grey;
+  border-radius: 6px;
+  .m-lr(18; 18);
+
+  @media (min-width: @tablet-width) {
+    width: 428px;
+    height: 6px;
+    .m-lr(24; 24);
+    background-color: @white-gainsboro-dark;
+  }
+}
+
+.compare__scale-toggle {
+  .pseudo();
+  top: calc(50% - 3px);
+  left: 50%;
+  width: 35px;
+  height: 6px;
+  background: @green-apple;
+  border-radius: 6px;
+
+  .compare__toggle--current ~ .compare__scale & {
+    left: calc(50% - 35px);
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    top: calc(50% - 17px);
+    left: 0;
+    width: 34px;
+    height: 34px;
+    background: @white;
+    border-radius: 50%;
+    border: 1px solid @white-gainsboro-dark;
+    box-shadow: 0 1px 3px @black-alpha-016;
+
+    &::before {
+      .pseudo();
+      top: calc(50% - 4px);
+      left: calc(50% - 4px);
+      width: 8px;
+      height: 8px;
+      background-color: @green-apple;
+      border-radius: 50%;
+    }
+
+    .compare__toggle--current ~ .compare__scale & {
+      left: calc(100% - 34px);
+    }
+  }
 }
