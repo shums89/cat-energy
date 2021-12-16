@@ -9,6 +9,7 @@
   position: relative;
   height: 240px;
   margin-bottom: 13px;
+  .animation();
 
   @media (min-width: @tablet-width) {
     .wrap(@tablet);
@@ -24,9 +25,11 @@
 .compare__item {
   display: none;
   background-size: contain;
+  .animation();
 
   &--current {
     display: block;
+    .animation();
   }
 
   & img {
