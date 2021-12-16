@@ -117,7 +117,7 @@
             </div>
           </div>
         </div>
-        <div class="example__compare compare">
+        <div class="example__compare compare compare--nojs">
           <ul class="compare__list">
             <li class="compare__item compare__item--before compare__item--current">
               <picture>
@@ -134,11 +134,9 @@
               </picture>
             </li>
           </ul>
-          <div class="compare__controls">
-            <button class="compare__toggle compare__toggle--before button compare__toggle--current" type="button">Было</button>
-            <div class="compare__scale">
-              <div class="compare__scale-toggle"></div>
-            </div>
+          <div class="compare__controls ">
+            <button class="compare__toggle compare__toggle--before button" type="button">Было</button>
+            <input class="compare__scale-toggle" type="range" min="1" max="100" value="50">
             <button class="compare__toggle compare__toggle--after button" type="button">Стало</button>
           </div>
         </div>

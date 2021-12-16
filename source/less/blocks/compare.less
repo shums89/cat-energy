@@ -5,14 +5,19 @@
 }
 
 .compare__list {
-  width: 320px;
+  .wrap(@mobile);
+  position: relative;
   height: 240px;
-  margin: auto;
   margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
     .wrap(@tablet);
     height: 520px;
+    overflow: hidden;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 19px;
   }
 }
 
@@ -20,19 +25,52 @@
   display: none;
   background-size: contain;
 
+  &--current {
+    display: block;
+  }
+
   & img {
     display: block;
     margin: auto;
   }
 
-  &--current {
-    display: block;
-  }
-
   @media (min-width: @tablet-width) {
-    & img {
-      width: auto;
+    display: block;
+    position: absolute;
+    overflow: hidden;
+
+    &--before {
+      left: 0;
       height: 100%;
+      width: 50%;
+
+      & img {
+        .pseudo();
+        top: 0;
+        left: 0;
+        height: 520px;
+        width: 708px;
+        max-width: 720px;
+        margin: 0;
+      }
+    }
+
+    &--after {
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      margin-left: 50%;
+
+      & img {
+        .pseudo();
+        top: 0;
+        right: 54px;
+        height: 520px;
+        width: 545px;
+        max-width: 545px;
+        margin: 0;
+      }
     }
   }
 }
@@ -43,6 +81,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     .wrap(@tablet);
@@ -59,6 +98,8 @@
 
   @media (min-width: @tablet-width) {
     border-bottom: 1px dotted @black-alpha-024;
+    width: 50px;
+    display: block;
 
     &:hover,
     &:focus {
@@ -71,58 +112,94 @@
   }
 }
 
-.compare__scale {
+.compare__scale-toggle {
   position: relative;
+  appearance: none;
   width: 84px;
   height: 14px;
   border: 1px solid @grey-very-light-grey;
   border-radius: 6px;
+  outline: none;
   .m-lr(18; 18);
+  .p-lr(6; 6);
+
+  .compare--nojs & {
+    pointer-events: none;
+  }
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 35px;
+    height: 6px;
+    background: @green-apple;
+    cursor: pointer;
+    border-radius: 6px;
+
+    .compare--nojs & {
+      position: absolute;
+      top: calc(50% - 3px);
+      left: 6px;
+    }
+  }
+
+  &::-moz-range-thumb {
+    width: 35px;
+    height: 6px;
+    background: @green-apple;
+    cursor: pointer;
+    border-radius: 6px;
+
+    .compare--nojs & {
+      position: absolute;
+      top: calc(50% - 3px);
+      left: 6px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     width: 428px;
     height: 6px;
-    .m-lr(24; 24);
+    .m-lr(28; 24);
+    padding: 0;
     background-color: @white-gainsboro-dark;
-  }
-}
-
-.compare__scale-toggle {
-  .pseudo();
-  top: calc(50% - 3px);
-  left: 50%;
-  width: 35px;
-  height: 6px;
-  background: @green-apple;
-  border-radius: 6px;
-
-  .compare__toggle--current ~ .compare__scale & {
-    left: calc(50% - 35px);
-  }
-
-  @media (min-width: @tablet-width) {
+    border: none;
     position: relative;
-    top: calc(50% - 17px);
-    left: 0;
-    width: 34px;
-    height: 34px;
-    background: @white;
-    border-radius: 50%;
-    border: 1px solid @white-gainsboro-dark;
-    box-shadow: 0 1px 3px @black-alpha-016;
+    pointer-events: initial;
 
-    &::before {
-      .pseudo();
-      top: calc(50% - 4px);
-      left: calc(50% - 4px);
-      width: 8px;
-      height: 8px;
-      background-color: @green-apple;
+    &::-webkit-slider-thumb {
+      width: 34px;
+      height: 34px;
+      background: @white;
+      background-image: url("../img/slider-control.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
       border-radius: 50%;
+      border: 1px solid @white-gainsboro-dark;
+      box-shadow: 0 1px 3px @black-alpha-016;
+
+      .compare--nojs & {
+        position: absolute;
+        top: calc(50% - 17px);
+        left: calc(50% - 17px);
+      }
     }
 
-    .compare__toggle--current ~ .compare__scale & {
-      left: calc(100% - 34px);
+    &::-moz-range-thumb {
+      width: 34px;
+      height: 34px;
+      background: @white;
+      background-image: url("../img/slider-control.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      border-radius: 50%;
+      border: 1px solid @white-gainsboro-dark;
+      box-shadow: 0 1px 3px @black-alpha-016;
+
+      .compare--nojs & {
+        position: absolute;
+        top: calc(50% - 17px);
+        left: calc(50% - 17px);
+      }
     }
   }
 }
