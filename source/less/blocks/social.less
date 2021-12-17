@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 22px;
   .m-tb(20; 21);
 
   @media (min-width: @tablet-width) {
@@ -14,6 +13,9 @@
 .social__link {
   display: block;
   .m-lr(18; 18);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
 
   &:active {
     opacity: 0.3;
@@ -28,8 +30,6 @@
   width: 23px;
   height: 16px;
   background-image: url("../img/icons/logo-vk.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
 
   &:hover {
     background-image: url("../img/icons/logo-vk-green.svg");
@@ -45,8 +45,6 @@
   width: 16px;
   height: 16px;
   background-image: url("../img/icons/logo-instagram.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
 
   &:hover {
     background-image: url("../img/icons/logo-instagram-green.svg");
@@ -62,8 +60,6 @@
   width: 22px;
   height: 22px;
   background-image: url("../img/icons/logo-facebook.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
 
   &:hover {
     background-image: url("../img/icons/logo-facebook-green.svg");
