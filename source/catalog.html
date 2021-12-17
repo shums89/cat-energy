@@ -5,16 +5,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Каталог продукции</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
   <header class="page-header">
-    <div class="page-header__logo">
-      <a class="page-header__logo-link" href="index.html">
-        <img class="page-header__logo" src="img/logo-mobile.png" width="191" height="38" alt="">
-      </a>
-    </div>
+    <a class="page-header__logo-link">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img class="page-header__logo" src="img/logo-mobile.svg" width="191" height="38" alt="Питание для котов «Cat Energy»">
+      </picture>
+    </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
       <ul class="main-nav__list">
@@ -42,7 +48,11 @@
           <div class="product__wrapper">
             <div class="product__info">
               <a class="product__img-link" href="#">
-                <img class="product__img" src="https://via.placeholder.com/68x86" width="68" height="86" alt="">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/products/pro-500-chicken-desktop@1x.png 1x, img/products/pro-500-chicken-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/products/pro-500-chicken-tablet@1x.png 1x, img/products/pro-500-chicken-tablet@2x.png 2x">
+                  <img class="product__img" src="img/products/pro-500-chicken-mobile@1x.png" srcset="img/products/pro-500-chicken-mobile@2x.png 2x" alt="">
+                </picture>
               </a>
               <table class="product__data">
                 <caption class="product__title-caption">
@@ -73,7 +83,11 @@
           <div class="product__wrapper">
             <div class="product__info">
               <a class="product__img-link" href="#">
-                <img class="product__img" src="https://via.placeholder.com/68x86" width="68" height="86" alt="">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/products/pro-1000-chicken-desktop@1x.png 1x, img/products/pro-1000-chicken-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/products/pro-1000-chicken-tablet@1x.png 1x, img/products/pro-1000-chicken-tablet@2x.png 2x">
+                  <img class="product__img" src="img/products/pro-1000-chicken-mobile@1x.png" srcset="img/products/pro-1000-chicken-mobile@2x.png 2x" alt="">
+                </picture>
               </a>
               <table class="product__data">
                 <caption class="product__title-caption">
@@ -104,7 +118,11 @@
           <div class="product__wrapper">
             <div class="product__info">
               <a class="product__img-link" href="#">
-                <img class="product__img" src="https://via.placeholder.com/68x86" width="68" height="86" alt="">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/products/pro-500-fish-desktop@1x.png 1x, img/products/pro-500-fish-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/products/pro-500-fish-tablet@1x.png 1x, img/products/pro-500-fish-tablet@2x.png 2x">
+                  <img class="product__img" src="img/products/pro-500-fish-mobile@1x.png" srcset="img/products/pro-500-fish-mobile@2x.png 2x" alt="">
+                </picture>
               </a>
               <table class="product__data">
                 <caption class="product__title-caption">
@@ -135,7 +153,11 @@
           <div class="product__wrapper">
             <div class="product__info">
               <a class="product__img-link" href="#">
-                <img class="product__img" src="https://via.placeholder.com/68x86" width="68" height="86" alt="">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/products/pro-1000-fish-desktop@1x.png 1x, img/products/pro-1000-fish-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/products/pro-1000-fish-tablet@1x.png 1x, img/products/pro-1000-fish-tablet@2x.png 2x">
+                  <img class="product__img" src="img/products/pro-1000-fish-mobile@1x.png" srcset="img/products/pro-1000-fish-mobile@2x.png 2x" alt="">
+                </picture>
               </a>
               <table class="product__data">
                 <caption class="product__title-caption">
@@ -166,7 +188,11 @@
           <div class="product__wrapper">
             <div class="product__info">
               <a class="product__img-link" href="#">
-                <img class="product__img" src="https://via.placeholder.com/68x86" width="68" height="86" alt="">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/products/slim-500-buckwheat-desktop@1x.png 1x, img/products/slim-500-buckwheat-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/products/slim-500-buckwheat-tablet@1x.png 1x, img/products/slim-500-buckwheat-tablet@2x.png 2x">
+                  <img class="product__img" src="img/products/slim-500-buckwheat-mobile@1x.png" srcset="img/products/slim-500-buckwheat-mobile@2x.png 2x" alt="">
+                </picture>
               </a>
               <table class="product__data">
                 <caption class="product__title-caption">
@@ -197,7 +223,11 @@
           <div class="product__wrapper">
             <div class="product__info">
               <a class="product__img-link" href="#">
-                <img class="product__img" src="https://via.placeholder.com/68x86" width="68" height="86" alt="">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/products/slim-1000-buckwheat-desktop@1x.png 1x, img/products/slim-1000-buckwheat-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/products/slim-1000-buckwheat-tablet@1x.png 1x, img/products/slim-1000-buckwheat-tablet@2x.png 2x">
+                  <img class="product__img" src="img/products/slim-1000-buckwheat-mobile@1x.png" srcset="img/products/slim-1000-buckwheat-mobile@2x.png 2x" alt="">
+                </picture>
               </a>
               <table class="product__data">
                 <caption class="product__title-caption">
@@ -228,7 +258,11 @@
           <div class="product__wrapper">
             <div class="product__info">
               <a class="product__img-link" href="#">
-                <img class="product__img" src="https://via.placeholder.com/68x86" width="68" height="86" alt="">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/products/slim-500-rice-desktop@1x.png 1x, img/products/slim-500-rice-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/products/slim-500-rice-tablet@1x.png 1x, img/products/slim-500-rice-tablet@2x.png 2x">
+                  <img class="product__img" src="img/products/slim-500-rice-mobile@1x.png" srcset="img/products/slim-500-rice-mobile@2x.png 2x" alt="">
+                </picture>
               </a>
               <table class="product__data">
                 <caption class="product__title-caption">
@@ -379,22 +413,7 @@
     </div>
   </footer>
 
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-  </script>
+  <script src="js/main-nav.js"></script>
 </body>
 
 </html>

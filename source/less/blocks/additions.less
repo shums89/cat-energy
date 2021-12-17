@@ -9,10 +9,12 @@
 .additions__wrapper {
   .wrap(@mobile);
   margin-bottom: 35px;
+  .animation();
 
   @media (min-width: @tablet-width) {
     .wrap(@tablet);
     margin-bottom: 76px;
+    transition-duration: 0s;
   }
 
   @media (min-width: @desktop-width) {
@@ -38,6 +40,7 @@
 .addition {
   .p-tb(13; 19);
   border-top: 1px solid @white-white-smoke-dark;
+  .animation();
 
   @media (min-width: @tablet-width) {
     padding: 26px 38px 28px;

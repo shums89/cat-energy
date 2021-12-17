@@ -5,16 +5,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cat Energy</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body page__body--background">
   <header class="page-header">
-    <div class="page-header__logo">
-      <a class="page-header__logo-link">
-        <img class="page-header__logo" src="img/logo-mobile.png" width="191" height="38" alt="">
-      </a>
-    </div>
+    <a class="page-header__logo-link">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img class="page-header__logo" src="img/logo-mobile.svg" width="191" height="38" alt="Питание для котов «Cat Energy»">
+      </picture>
+    </a>
     <nav class="main-nav main-nav--opened main-nav--nojs">
       <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
       <ul class="main-nav__list">
@@ -38,7 +44,11 @@
       <div class="promo__wrapper">
         <h2 class="promo__title">Функциональное<br>питание для котов</h2>
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
-        <img class="promo__image" src="img/index-can-mobile.png" alt="Cat Pro Energy с вкусом курицы">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.png 1x, img/index-can-tablet@2x.png 2x">
+          <img class="promo__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Cat Pro Energy с вкусом курицы">
+        </picture>
         <a class="promo__link button button-action" href="form.html">Подобрать программу</a>
       </div>
     </section>
@@ -46,17 +56,15 @@
     <section class="programs">
       <div class="programs__wrapper">
         <ul class="programs__list">
-          <li class="programs__item">
+          <li class="programs__item programs__item--slim">
             <h3 class="programs__item-title">Похудение</h3>
-            <img class="programs__item-img cat-slim" src="img/icons/cat-slim.svg" width="50" height="53" alt="">
             <p class="programs__item-description">
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
             </p>
             <a class="program__item-link" href="catalog.html">Каталог Slim</a>
           </li>
-          <li class="programs__item">
+          <li class="programs__item programs__item--pro">
             <h3 class="programs__item-title">Набор массы</h3>
-            <img class="programs__item-img cat-pro" src="img/icons/cat-pro.svg" width="67" height="28" alt="">
             <p class="programs__item-description">
               Заработать авторитет среди дворовых котов <br class="tablet">и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые <br class="tablet">мышцы!
             </p>
@@ -70,28 +78,16 @@
       <div class="plan__wrapper">
         <h2 class="plan__title">Как это работает</h2>
         <ol class="plan__list">
-          <li class="plan__item">
-            <div class="plan__img-wrapper">
-              <img class="plan__img" src="img/icons/icon_leaf.svg" width="30" height="32" alt="">
-            </div>
+          <li class="plan__item plan__item--leaf">
             <p class="plan__description">Функциональное питание содержит только полезные питательные вещества.</p>
           </li>
-          <li class="plan__item">
-            <div class="plan__img-wrapper">
-              <img class="plan__img" src="img/icons/icon_tub.svg" width="29" height="31" alt="">
-            </div>
+          <li class="plan__item plan__item--tub">
             <p class="plan__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
           </li>
-          <li class="plan__item">
-            <div class="plan__img-wrapper">
-              <img class="plan__img" src="img/icons/icon_eat.svg" width="25" height="30" alt="">
-            </div>
+          <li class="plan__item plan__item--eat">
             <p class="plan__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
-          <li class="plan__item">
-            <div class="plan__img-wrapper">
-              <img class="plan__img" src="img/icons/icon_alarm.svg" width="32" height="33" alt="">
-            </div>
+          <li class="plan__item plan__item--alarm">
             <p class="plan__description">Уже через месяц наслаждайтесь изменениями к лучшему <nobr>вашего питомца!</nobr>
             </p>
           </li>
@@ -121,19 +117,28 @@
             </div>
           </div>
         </div>
-        <div class="example__compare compare slider">
+        <div class="example__compare compare compare--nojs">
           <ul class="compare__list">
             <li class="compare__item compare__item--before compare__item--current">
-              <img src="img/cat-fat.png" width="310" height="232" alt="Фото кота до приема Cat Energy">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/cat-before-desktop@1x.png 1x, img/cat-before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/cat-before-tablet@1x.png 1x, img/cat-before-tablet@2x.png 2x">
+                <img src="img/cat-before-mobile@1x.png" srcset="img/cat-before-mobile@2x.png 2x" width="310" height="232" alt="Фото кота до приема Cat Energy">
+              </picture>
             </li>
-            <li class="compare__item compare__item--after visually-hidden">
-              <img src="img/cat-skinny.png" width="251" height="240" alt="Фото кота после курса приема Cat Energy">
+            <li class="compare__item compare__item--after">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/cat-after-desktop@1x.png 1x, img/cat-after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/cat-after-tablet@1x.png 1x, img/cat-after-tablet@2x.png 2x">
+                <img src="img/cat-after-mobile@1x.png" srcset="img/cat-after-mobile@2x.png 2x" width="251" height="240" alt="Фото кота после курса приема Cat Energy">
+              </picture>
             </li>
           </ul>
-          <p class="compare__toggles slider__toggles">
-            <button class="slider__toggle slider__toggle--current" type="button">Было</button>
-            <button class="slider__toggle" type="button">Стало</button>
-          </p>
+          <div class="compare__controls ">
+            <button class="compare__toggle compare__toggle--before button" type="button">Было</button>
+            <input class="compare__scale-toggle" type="range" min="1" max="100" value="50">
+            <button class="compare__toggle compare__toggle--after button" type="button">Стало</button>
+          </div>
         </div>
       </div>
     </section>
@@ -190,22 +195,8 @@
     </div>
   </footer>
 
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-  </script>
+  <script src="js/main-nav.js"></script>
+  <script src="js/compare.js"></script>
 </body>
 
 </html>
