@@ -11,11 +11,14 @@
 }
 
 .page-footer__bottom-wrapper {
-  .wrap(@mobile);
+  min-width: @mobile;
+  width: 87%;
+  margin: 0 auto;
   .animation();
 
   @media (min-width: @tablet-width) {
-    .wrap(@tablet);
+    min-width: @tablet;
+    width: 84%;
     display: flex;
     justify-content: space-between;
     align-items: center;

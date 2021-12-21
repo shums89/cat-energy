@@ -1,6 +1,7 @@
 .copyright__link {
   position: relative;
   display: block;
+  .wrap(@mobile);
   .p-tb(28; 32);
 
   &:active {
@@ -26,8 +27,9 @@
   }
 
   @media (min-width: @tablet-width) {
+    width: auto;
     padding: 0;
-    padding-right: 43px;
+    padding-right: 49px;
   }
 }
 

@@ -14,8 +14,13 @@
 }
 
 .example__wrapper {
+  min-width: @mobile;
+  width: 87%;
+  margin: 0 auto;
+
   @media (min-width: @tablet-width) {
-    .wrap(@tablet);
+    min-width: @tablet;
+    width: 84%;
   }
 
   @media (min-width: @desktop-width) {
@@ -26,13 +31,6 @@
 }
 
 .example__data {
-  .wrap(@mobile);
-
-  @media (min-width: @tablet-width) {
-    width: auto;
-    margin: 0;
-  }
-
   @media (min-width: @desktop-width) {
     width: 436px;
   }
@@ -77,7 +75,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 59px;
+    width: @tablet;
+    margin: 0 auto 59px;
   }
 
   @media (min-width: @desktop-width) {
@@ -89,10 +88,13 @@
 .stats__list {
   display: flex;
   justify-content: space-between;
+  width: @mobile;
   .m-tb(0; 34);
+  margin: 0 auto 34px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 0;
+    width: auto;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {

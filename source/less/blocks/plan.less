@@ -16,10 +16,14 @@
 }
 
 .plan__wrapper {
-  .wrap(@mobile);
+  min-width: @mobile;
+  width: 87%;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: @tablet-width) {
-    .wrap(@tablet);
+    min-width: @tablet;
+    width: 84%;
   }
 
   @media (min-width: @desktop-width) {
@@ -53,6 +57,7 @@
 .plan__item {
   position: relative;
   margin-bottom: 20px;
+  min-height: 60px;
 
   &::before {
     .pseudo();
