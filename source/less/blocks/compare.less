@@ -2,10 +2,15 @@
   @media (min-width: @tablet-width) {
     padding-bottom: 64px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .compare__list {
-  .wrap(@mobile);
+  width: 310px;
+  margin: 0 auto;
   position: relative;
   height: 240px;
   margin-bottom: 13px;
@@ -15,10 +20,11 @@
     .wrap(@tablet);
     height: 520px;
     overflow: hidden;
+    margin-bottom: 10px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 19px;
+    margin-bottom: 30px;
   }
 }
 
@@ -103,6 +109,7 @@
     border-bottom: 1px dotted @black-alpha-024;
     width: 50px;
     display: block;
+    font-size: 20px;
 
     &:hover,
     &:focus {
@@ -162,7 +169,7 @@
   @media (min-width: @tablet-width) {
     width: 428px;
     height: 6px;
-    .m-lr(28; 24);
+    .m-lr(24; 24);
     padding: 0;
     background-color: @white-gainsboro-dark;
     border: none;

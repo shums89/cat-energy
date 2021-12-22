@@ -9,18 +9,15 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 11px;
+    padding-bottom: 64px;
   }
 }
 
 .example__wrapper {
-  min-width: @mobile;
-  width: 87%;
-  margin: 0 auto;
-
   @media (min-width: @tablet-width) {
     min-width: @tablet;
     width: 84%;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -31,6 +28,15 @@
 }
 
 .example__data {
+  min-width: @mobile;
+  width: 87%;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    margin: 0;
+  }
+
   @media (min-width: @desktop-width) {
     width: 436px;
   }
@@ -47,8 +53,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 58px;
-    margin-bottom: 146px;
+    .m-tb(56; 146);
   }
 }
 
@@ -76,12 +81,14 @@
     justify-content: space-between;
     align-items: center;
     width: @tablet;
-    margin: 0 auto 59px;
+    margin: 0 auto 83px;
   }
 
   @media (min-width: @desktop-width) {
+    width: auto;
     flex-direction: column;
     align-items: start;
+    margin-bottom: 0;
   }
 }
 
@@ -98,7 +105,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 60px;
+    margin-bottom: 58px;
   }
 }
 
@@ -180,15 +187,3 @@
     }
   }
 }
-
-// .compare {
-//   height: 295px;
-
-//   @media (min-width: @tablet-width) {
-//     height: 620px;
-//   }
-
-//   @media (min-width: @desktop-width) {
-//     height: 656px;
-//   }
-// }
