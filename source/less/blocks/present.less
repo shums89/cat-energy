@@ -1,11 +1,12 @@
 .present {
-  .wrap(@mobile);
+  width: 100%;
   min-height: 289px;
   padding: 58px 10px 43px 10px;
   color: @white;
   background-color: @green-apple;
   background-image: url("../img/present-mobile@1x.jpg");
-  background-size: contain;
+  background-size: cover;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -18,7 +19,6 @@
   }
 
   @media (min-width: @tablet-width) {
-    .wrap(@tablet);
     min-height: 200px;
     flex-direction: row;
     justify-content: space-around;
