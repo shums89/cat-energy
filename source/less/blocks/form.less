@@ -13,10 +13,14 @@
 }
 
 .form__button-wrapper {
-  .wrap(@mobile);
+  min-width: @mobile;
+  width: 87%;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    .wrap(@tablet);
+    min-width: @tablet;
+    width: 84%;
+    .p-lr(40; 36);
     display: flex;
     justify-content: start;
   }
@@ -49,6 +53,7 @@
 
 .form__required {
   width: @mobile;
+  .arial();
   .font(n; 400; 14; 16);
   text-align: center;
 
@@ -56,5 +61,6 @@
     width: auto;
     display: flex;
     align-items: center;
+    font-size: 16px;
   }
 }

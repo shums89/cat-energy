@@ -1,8 +1,12 @@
 .textarea {
   border: 1px solid @white-gainsboro;
-  padding: 13px 5px 13px 15px;
+  padding: 9px 5px 13px 15px;
   text-transform: uppercase;
   resize: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 13px 5px 13px 18px;
+  }
 }
 
 .textarea::placeholder {
