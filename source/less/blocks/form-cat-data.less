@@ -3,9 +3,10 @@
   .animation();
 
   @media (min-width: @tablet-width) {
-    .wrap(@tablet);
-    margin-bottom: 71px;
-    padding-right: 36px;
+    min-width: @tablet;
+    width: 84%;
+    margin: 0 auto 71px;
+    .p-lr(40; 36);
   }
 
   @media (min-width: @desktop-width) {
@@ -32,7 +33,9 @@
 }
 
 .cat-info__list {
-  .wrap(@mobile);
+  min-width: @mobile;
+  width: 87%;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     width: 100%;
@@ -75,7 +78,9 @@
 }
 
 .purpose__list {
-  .wrap(@mobile);
+  min-width: @mobile;
+  width: 87%;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     width: 100%;

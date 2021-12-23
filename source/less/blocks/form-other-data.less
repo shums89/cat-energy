@@ -19,14 +19,18 @@
 }
 
 .other__list {
-  .wrap(@mobile);
+  min-width: @mobile;
+  width: 87%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   .animation();
 
   @media (min-width: @tablet-width) {
-    .wrap(@tablet);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    min-width: @tablet;
+    width: 84%;
+    .p-lr(40; 36);
   }
 
   @media (min-width: @desktop-width) {
@@ -46,6 +50,7 @@
 
 .other__item {
   margin-bottom: 25px;
+  min-width: @mobile;
 
   @media (min-width: @tablet-width) {
     width: 288px;

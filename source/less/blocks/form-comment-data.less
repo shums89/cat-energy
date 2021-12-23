@@ -15,11 +15,15 @@
 }
 
 .comment__text-wrapper {
-  .wrap(@mobile);
+  min-width: @mobile;
+  width: 87%;
+  margin: 0 auto;
   .animation();
 
   @media (min-width: @tablet-width) {
-    .wrap(@tablet);
+    min-width: @tablet;
+    width: 84%;
+    .p-lr(40; 36);
   }
 
   @media (min-width: @desktop-width) {

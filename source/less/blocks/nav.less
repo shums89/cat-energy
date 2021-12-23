@@ -28,8 +28,12 @@
     .p-tb(5; 2);
   }
 
-  .main-nav--closed .main-nav__item {
-    display: none;
+  .main-nav--closed {
+    border-bottom: 1px solid @white-gainsboro-dark;
+
+    & .main-nav__item {
+      display: none;
+    }
   }
 
   .main-nav--nojs .main-nav__toggle {

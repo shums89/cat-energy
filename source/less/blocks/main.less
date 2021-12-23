@@ -1,16 +1,32 @@
 .page-main__title {
-  .wrap(@mobile);
+  min-width: @mobile;
+  width: 87%;
+  margin: 0 auto;
   .font(n; 400; 36; 36);
-  .m-tb(27; 37);
+  padding-top: 27px;
+  margin-bottom: 37px;
 
   @media (min-width: @tablet-width) {
-    .wrap(@tablet);
+    min-width: @tablet;
+    width: 84%;
+    margin-bottom: 54px;
+    padding-top: 0;
     .font(n; 400; 60; 60);
-    .m-tb(50; 54);
   }
 
   @media (min-width: @desktop-width) {
     .wrap(@desktop);
-    .m-tb(52; 56);
+    padding-top: 45px;
+    margin-bottom: 56px;
+  }
+}
+
+.page-main__title--form {
+  @media (min-width: @tablet-width) {
+    .p-lr(40; 36);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
   }
 }

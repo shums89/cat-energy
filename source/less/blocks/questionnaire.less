@@ -1,4 +1,4 @@
-.questionnaire__wrapper {
+.questionnaire {
   margin-bottom: 32px;
 
   @media (min-width: @tablet-width) {
@@ -11,19 +11,22 @@
 }
 
 .questionnaire__title {
-  .wrap(@mobile);
+  min-width: @mobile;
+  width: 87%;
+  margin: 0 auto 37px;
   .font(n; 400; 14; 18);
   text-transform: uppercase;
-  margin-bottom: 37px;
 
   @media (min-width: @tablet-width) {
-    .wrap(@tablet);
-    .font(n; 400; 20; 30);
+    min-width: @tablet;
+    width: 84%;
     margin-bottom: 66px;
+    .p-lr(40; 36);
+    .font(n; 400; 20; 30);
   }
 
   @media (min-width: @desktop-width) {
-    .wrap(@desktop);
-    margin-bottom: 66px;
+    width: @desktop;
+    padding: 0;
   }
 }
