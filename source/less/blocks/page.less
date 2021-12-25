@@ -19,13 +19,10 @@
 .page__body--background {
   @media (min-width: @desktop-width) {
     background-image:
-      linear-gradient(to right, transparent 50%, @green-apple-alpha-050 50%, @green-apple-alpha-050 calc(50% + 800px), @green-apple calc(50% + 1000px)),
+      linear-gradient(to right, @green-apple-alpha-050, @green-apple-alpha-050 720px, @green-apple 900px),
       url("../img/page-background-desktop@1x.jpg"),
-      linear-gradient(to right, transparent 50%, @green-apple 50%);
-    background-position:
-      0 0,
-      50vw top,
-      0 0;
+      linear-gradient(to right, @green-apple, @green-apple);
+    background-position: 50vw top;
     background-size: auto 694px;
     background-repeat: no-repeat;
     z-index: -1;
