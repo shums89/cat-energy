@@ -4,6 +4,7 @@
   margin-top: -1px;
   margin-left: -1px;
   padding: 0 20px 0;
+  .font(n; 400; 16; 20);
 
   @media (min-width: @tablet-width) {
     min-height: 511px;
@@ -15,14 +16,14 @@
 
 .product__wrapper {
   width: @mobile;
-  .p-tb(19; 25);
+  .p-tb(19; 24);
   .animation();
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 0 59px;
+    margin: 0 0 60px;
     padding: 0 37px 0;
     width: 324px;
     border: none;
@@ -34,65 +35,75 @@
   }
 }
 
-.product:last-child {
-  // border-bottom: 1px solid @white-white-smoke-dark;
-
-  @media (min-width: @tablet-width) {
-    border: none;
-  }
-}
-
 .product__info {
   display: flex;
-  margin-bottom: 13px;
+  align-items: flex-start;
+  margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
+    align-items: center;
     width: 100%;
     .center();
-    margin-bottom: 33px;
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 35px;
   }
 }
 
 .product__img-link {
+  align-self: center;
   width: 140px;
   height: 106px;
-  padding: 5px 5px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 
   @media (min-width: @tablet-width) {
     width: auto;
     height: 215px;
-    margin-bottom: 20px;
-    align-items: flex-end;
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 204px;
+    margin-bottom: 38px;
   }
 }
 
 .product__data {
   flex-grow: 1;
   border-collapse: collapse;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 }
 
 .product__title-caption {
   text-align: left;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 
   @media (min-width: @tablet-width) {
     text-align: center;
-    margin-bottom: 21px;
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 14px;
   }
 }
 
 .product__title {
   width: 80px;
   .zero-mp();
-  .font(n; 400; 16; 20);
+  font: inherit;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    width: 125px;
+    width: 159px;
     margin: 0 auto 0;
     .font(n; 400; 20; 24);
   }
@@ -143,7 +154,7 @@
 
 .product-all {
   @media (min-width: @tablet-width) {
-    margin-top: 81px;
+    padding-top: 81px;
   }
 }
 
@@ -151,13 +162,14 @@
   @media (min-width: @tablet-width) {
     background-image: none;
     border: 1px solid @white-white-smoke;
-    height: calc(100% - 81px);
+    min-height: calc(100% - 60px);
   }
 }
 
 .product-all__info {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 

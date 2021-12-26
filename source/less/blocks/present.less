@@ -1,7 +1,7 @@
 .present {
   width: 100%;
   min-height: 289px;
-  padding: 58px 10px 43px 10px;
+  padding: 58px 10px 43px;
   color: @white;
   background-color: @green-apple;
   background-image: url("../img/present-mobile@1x.jpg");
@@ -20,8 +20,9 @@
 
   @media (min-width: @tablet-width) {
     min-height: 200px;
+    padding: 57px 124px 60px 78px;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     background-image: url("../img/present-tablet@1x.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -33,6 +34,7 @@
     width: 245px;
     min-height: 289px;
     margin: 0;
+    padding: 56px 42px 42px;
     flex-direction: column;
     background-image: url("../img/present-desktop@1x.jpg");
 

@@ -1,10 +1,11 @@
 .addition {
-  .p-tb(13; 19);
-  border-top: 1px solid @white-white-smoke-dark;
+  .p-tb(13; 17);
+  margin-bottom: -1px;
+  border: 1px solid @white-white-smoke-dark;
   .animation();
 
   @media (min-width: @tablet-width) {
-    padding: 26px 38px 28px;
+    padding: 26px 38px 27px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -12,11 +13,8 @@
 
   @media (min-width: @desktop-width) {
     padding: 15px 0 17px;
+    align-items: baseline;
   }
-}
-
-.addition:last-child {
-  border-bottom: 1px solid @white-white-smoke-dark;
 }
 
 .addition__data {
@@ -27,13 +25,13 @@
   @media (min-width: @tablet-width) {
     flex: none;
     width: 632px;
-    margin: 0 38px 23px 0;
+    margin: 0 38px 25px 0;
   }
 
   @media (min-width: @desktop-width) {
     width: 612px;
     margin-bottom: 0;
-    align-items: center;
+    align-items: baseline;
   }
 }
 
@@ -64,6 +62,7 @@
   .font(n; 400; 14; 14);
 
   @media (min-width: @tablet-width) {
+    justify-content: flex-end;
     margin-bottom: 0;
     .font(n; 400; 16; 20);
   }
@@ -71,10 +70,13 @@
   @media (min-width: @desktop-width) {
     width: 288px;
     flex: none;
+    justify-content: space-between;
   }
 }
 
 .addition__price {
+  text-transform: uppercase;
+
   @media (min-width: @tablet-width) {
     min-width: 92px;
     margin: 0;
@@ -85,6 +87,7 @@
 .addition__buy {
   text-align: center;
   .p-tb(10; 10);
+  .font(n; 400; 16; 20);
 
   @media (min-width: @tablet-width) {
     flex-grow: 1;
