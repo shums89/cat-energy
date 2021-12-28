@@ -71,51 +71,46 @@
 }
 
 .owner-info__input {
-  order: 2;
   flex-grow: 1;
-  background-repeat: no-repeat;
-  background-position-y: 50%;
-  padding-right: 45px;
+  padding-right: 40px;
 
-  &[type="email"] {
-    background-image: url("../img/icons/email-black.svg");
-    background-size: 19px 14px;
-    background-repeat: no-repeat;
-    background-position-x: calc(100% - 16px);
-
-    &:invalid:not(:placeholder-shown) {
-      background-image: url("../img/icons/email-red.svg");
-    }
-
-    &:focus {
-      background-image: url("../img/icons/email-green.svg");
-    }
+  &:invalid:not(:placeholder-shown) ~ .owner-info__icon {
+    color: @red-mona-lisa;
   }
 
-  &[type="tel"] {
-    background-image: url("../img/icons/phone-black.svg");
-    background-size: 20px 21px;
-    background-repeat: no-repeat;
-    background-position-x: calc(100% - 13px);
-
-    &:invalid:not(:placeholder-shown) {
-      background-image: url("../img/icons/phone-red.svg");
-    }
-
-    &:focus {
-      background-image: url("../img/icons/phone-green.svg");
-    }
+  &:focus ~ .owner-info__icon {
+    color: @green-apple;
   }
 
   @media (min-width: @tablet-width) {
     padding-right: 50px;
+  }
+}
 
-    &[type="email"] {
-      background-position-x: calc(100% - 19px);
+.owner-info__icon {
+  position: absolute;
+
+  &--email {
+    top: calc(50% - 7px);
+    right: 16px;
+    width: 19px;
+    height: 14px;
+  }
+
+  &--phone {
+    top: calc(50% - 8px);
+    right: 13px;
+    width: 20px;
+    height: 19px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--email {
+      right: 19px;
     }
 
-    &[type="tel"] {
-      background-position-x: calc(100% - 17px);
+    &--phone {
+      right: 17px;
     }
   }
 }

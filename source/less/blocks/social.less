@@ -19,9 +19,12 @@
 .social__link {
   display: block;
   .m-lr(18; 18);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: contain;
+  color: @grey-dim-gray;
+
+  &:hover,
+  &:focus {
+    color: @green-apple;
+  }
 
   &:active {
     opacity: 0.3;
@@ -32,14 +35,9 @@
   }
 }
 
-.social__link--vkontakte {
+.social__logo--vk {
   width: 23px;
   height: 16px;
-  background-image: url("../img/icons/logo-vk.svg");
-
-  &:hover {
-    background-image: url("../img/icons/logo-vk-green.svg");
-  }
 
   @media (min-width: @tablet-width) {
     width: 30px;
@@ -47,14 +45,9 @@
   }
 }
 
-.social__link--instagram {
+.social__logo--instagram {
   width: 16px;
   height: 16px;
-  background-image: url("../img/icons/logo-instagram.svg");
-
-  &:hover {
-    background-image: url("../img/icons/logo-instagram-green.svg");
-  }
 
   @media (min-width: @tablet-width) {
     width: 23px;
@@ -62,14 +55,9 @@
   }
 }
 
-.social__link--facebook {
+.social__logo--facebook {
   width: 22px;
   height: 22px;
-  background-image: url("../img/icons/logo-facebook.svg");
-
-  &:hover {
-    background-image: url("../img/icons/logo-facebook-green.svg");
-  }
 
   @media (min-width: @tablet-width) {
     width: 28px;

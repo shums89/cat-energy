@@ -1,7 +1,8 @@
 .addition {
   .p-tb(13; 17);
   margin-bottom: -1px;
-  border: 1px solid @white-white-smoke-dark;
+  border-top: 1px solid @white-white-smoke-dark;
+  border-bottom: 1px solid @white-white-smoke-dark;
   .animation();
 
   @media (min-width: @tablet-width) {
@@ -9,11 +10,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    border: 1px solid @white-white-smoke-dark;
   }
 
   @media (min-width: @desktop-width) {
     padding: 15px 0 17px;
     align-items: baseline;
+    border-left: none;
+    border-right: none;
   }
 }
 
