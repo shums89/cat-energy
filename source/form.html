@@ -92,12 +92,18 @@
               </div>
               <ul class="owner-info__list">
                 <li class="owner-info__item">
-                  <input class="owner-info__input input-text" id="field-email" type="email" name="email" placeholder="кuklachev@gmail.com" required>
                   <label class="owner-info__label" for="field-email">E-mail:*</label>
+                  <input class="owner-info__input input-text" id="field-email" type="email" name="email" placeholder="кuklachev@gmail.com" required>
+                  <svg class="owner-info__icon owner-info__icon--email" width="19" height="14">
+                    <use href="img/icons/sprite-form.svg#email"></use>
+                  </svg>
                 </li>
                 <li class="owner-info__item">
-                  <input class="owner-info__input input-text" id="field-phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
                   <label class="owner-info__label" for="field-phone">Телефон:*</label>
+                  <input class="owner-info__input input-text" id="field-phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" pattern="[0-9,+, ,(),-]{11,18}" required>
+                  <svg class="owner-info__icon owner-info__icon--phone" width="20" height="21">
+                    <use href="img/icons/sprite-form.svg#phone"></use>
+                  </svg>
                 </li>
               </ul>
             </fieldset>
