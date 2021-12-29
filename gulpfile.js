@@ -44,9 +44,9 @@ const html = () => {
 // Scripts
 
 const scripts = () => {
-  return gulp.src("source/js/script.js")
+  return gulp.src("source/js/*.js")
     .pipe(terser())
-    .pipe(rename("script.min.js"))
+    .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 };
@@ -56,7 +56,7 @@ exports.scripts = scripts;
 // Images
 
 const optimizeImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src(["source/img/**/*.{png,jpg,svg}", "!source/img/sprite/**"])
     .pipe(imagemin([
       imagemin.mozjpeg({ progressive: true }),
       imagemin.optipng({ optimizationLevel: 3 }),
@@ -68,7 +68,7 @@ const optimizeImages = () => {
 exports.images = optimizeImages;
 
 const copyImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src(["source/img/**/*.{png,jpg,svg}", "!source/img/sprite/**"])
     .pipe(gulp.dest("build/img"));
 };
 
@@ -77,7 +77,8 @@ exports.images = copyImages;
 // WebP
 
 const createWebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
+  return gulp.src(["source/img/**/*.{jpg,png}", "!source/img/background/**"
+  ])
     .pipe(webp({ quality: 90 }))
     .pipe(gulp.dest("build/img"));
 };
@@ -87,7 +88,7 @@ exports.createWebp = createWebp;
 // Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/icons/*.svg")
+  return gulp.src("source/img/sprite/*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -103,8 +104,7 @@ const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
-    "source/img/**/*.svg",
-    "!source/img/icons/*.svg",
+    "source/*.webmanifest",
   ], {
     base: "source"
   })
@@ -184,4 +184,5 @@ exports.default = gulp.series(
   gulp.series(
     server,
     watcher
-  ));
+  )
+);

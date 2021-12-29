@@ -74,8 +74,12 @@
   flex-grow: 1;
   padding-right: 40px;
 
-  &:invalid:not(:placeholder-shown) ~ .owner-info__icon {
+  &:invalid ~ .owner-info__icon {
     color: @red-mona-lisa;
+  }
+
+  &:placeholder-shown ~ .owner-info__icon {
+    color: @grey-nero;
   }
 
   &:focus ~ .owner-info__icon {
@@ -89,6 +93,7 @@
 
 .owner-info__icon {
   position: absolute;
+  color: @grey-nero;
 
   &--email {
     top: calc(50% - 7px);

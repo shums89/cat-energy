@@ -5,16 +5,23 @@
   .p-lr(15; 15);
   text-transform: uppercase;
 
-  &:hover {
-    border-color: @grey-very-light-grey;
+  &:hover,
+  &:hover:placeholder-shown {
+    border: 1px solid @grey-very-light-grey;
   }
 
-  &:focus {
-    border: 2px solid @grey-charcoal;
-  }
-
-  &:invalid:not(:placeholder-shown) {
+  &:invalid {
     border: 2px solid @red-mona-lisa;
+  }
+
+  &:placeholder-shown {
+    border: 1px solid @white-gainsboro;
+  }
+
+  &:focus,
+  &:focus:placeholder-shown {
+    outline: none;
+    border: 2px solid @grey-charcoal;
   }
 
   @media (min-width: @tablet-width) {
